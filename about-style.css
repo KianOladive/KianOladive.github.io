@@ -49,6 +49,11 @@ header {
     flex-direction: column;
 }
 
+#pic2 {
+    max-height: 512px;
+    margin-left: 20px;
+}
+
 #landing-page-text {
     font-size: 10vh;
     font-family: 'Josefin Sans', sans-serif;
