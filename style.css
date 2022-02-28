@@ -15,25 +15,33 @@ html, body {
 }
 
 header {
-    background-color: #006cb9;
+    --background: transparent;
+    --text: #006cb9;
+
+    background-color: var(--background);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px 10px;
     position: fixed;
     width: 100%;
-    box-shadow: 0 6px 4px -1px rgba(0,0,0,.5);
     z-index: 3;
     height:3vh;
 }
 
 .nav-text {
-    color: white;
+    color: var(--text);
     text-decoration: none;
     font-family: "Ropa Sans", sans-serif;
     font-size: 16px;
     margin: 0 4rem;
     transition: all .7s ease 0s;
+}
+
+.header-scrolled {
+    --text: white;
+    --background: #006cb9;
+    box-shadow: 0 6px 4px -1px rgba(0,0,0,.5);
 }
 
 .nav-text:hover {

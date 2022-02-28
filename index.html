@@ -10,7 +10,7 @@
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     </head>
     <body>
-        <header> 
+        <header>
             <center>
                 <a href="#hone" class="nav-text">Home</a>
                 <a href="#my-projects" class="nav-text">My Projects</a>
@@ -231,5 +231,11 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+    <script>
+        window.addEventListener('scroll', function () {
+            let header = document.querySelector('header');
+            header.classList.toggle('header-scrolled', window.scrollY > 10);
+        })
     </script>
 </html>
