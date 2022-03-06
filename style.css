@@ -44,6 +44,10 @@ header {
     box-shadow: 0 6px 4px -1px rgba(0,0,0,.5);
 }
 
+.header-scrolled-to-end {
+    box-shadow: 0 6px 4px -1px rgba(0,0,0,0);
+}
+
 .nav-text:hover {
     color: #B94E00;
     transition: all .7s ease 0s;
@@ -258,8 +262,13 @@ header {
     position: relative;
 }
 
-.project-text-eigth { 
+.project-text-eight { 
     grid-row: 24 / span 1;
+    position: relative;
+}
+
+.project-text-nine { 
+    grid-row: 27 / span 1;
     position: relative;
 }
 
@@ -325,6 +334,13 @@ header {
 .eigth-pic {
     grid-column: 3 / span 6;
     grid-row: 23 / span 3;
+    margin: 3rem 0;
+    position: relative;
+}
+
+.ninth-pic {
+    grid-column: 8 / span 6;
+    grid-row: 26 / span 3;
     margin: 3rem 0;
     position: relative;
 }

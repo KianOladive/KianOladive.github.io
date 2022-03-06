@@ -132,10 +132,22 @@
             </div>  
         
             <div class = "eigth-pic picz-even" data-aos="fade-left"> 
+                <img class='project-pic front' src = "lifestyletracker.png">
+                <a href="https://youtu.be/uKMo16frXX0" target="_blank"><h3> Learn More </h3></a>
+            </div>
+            <div class="project-text-eight even" data-aos="fade-right">
+                <h2> Java GUI - Lifestyle Tracker </h2>
+                <p> This was my second Java GUI Project, which was one of our 
+                    major requirements in my Intro to Programming class. It 
+                    takes in user input to determine weight loss or gain
+                    depending on the user's diet.  </p>
+            </div>  
+        
+            <div class = "ninth-pic picz-odd" data-aos="fade-right"> 
                 <img class='project-pic front' src = "qmark.jpg">
                 <h3> Coming Soon... </h3>
             </div>
-            <div class="project-text-eigth even" data-aos="fade-right">
+            <div class="project-text-nine odd" data-aos="fade-left">
                 <h2>Coming Soon...</h2>
             </div>  
         </div>
@@ -235,7 +247,11 @@
     <script>
         window.addEventListener('scroll', function () {
             let header = document.querySelector('header');
+            
             header.classList.toggle('header-scrolled', window.scrollY > 10);
+
+            const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+            header.classList.toggle('header-scrolled-to-end', window.scrollY >= scrollableHeight);
         })
     </script>
 </html>
