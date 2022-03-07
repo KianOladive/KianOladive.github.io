@@ -272,6 +272,11 @@ header {
     position: relative;
 }
 
+.project-text-ten { 
+    grid-row: 30 / span 1;
+    position: relative;
+}
+
 /* ======================================= pictures */
 
 .project-pic {  
@@ -341,6 +346,13 @@ header {
 .ninth-pic {
     grid-column: 8 / span 6;
     grid-row: 26 / span 3;
+    margin: 3rem 0;
+    position: relative;
+}
+
+.tenth-pic {
+    grid-column: 3 / span 6;
+    grid-row: 29 / span 3;
     margin: 3rem 0;
     position: relative;
 }
