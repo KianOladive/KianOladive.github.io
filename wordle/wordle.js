@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const isCorrectLetter = word.includes(letter)
 
         if (!isCorrectLetter) {
-            return "rgb (58,58,60)";
+            return "rgb(58,58,60)";
         }
 
         const letterInThatPosition = word.charAt(index);
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function handleDel() {
         const currentWordArr = getCurrentWordArray();
-        const removedLetter = getCurrentWordArray.pop();
+        const removedLetter = currentWordArr.pop();
         
         guessedWords[guessedWords.length - 1] = currentWordArr;
 
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             if (letter === 'del') {
-                handleDel()
+                handleDel();
                 return
             }
 
