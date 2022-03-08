@@ -1,12 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const wordLength = 4;
+    const word = "yugto";
+    const wordLength = 5;
+
     createSquares();
 
     let guessedWords = [[]];
     let availableSpace = 1;
+    let flip = true;
 
-    const word = "ahon";
+    const yellow = "rgb(181, 159, 59)";
+    const darkgray = "rgb(58, 58, 60)";
+    const green = "rgb(83, 141, 78)";
+
+    let gameOver = false;
     let guessedWordCount = 0;
 
     const keys = document.querySelectorAll(".keyboard-row button");
@@ -33,21 +40,22 @@ document.addEventListener("DOMContentLoaded", () => {
         const isCorrectLetter = word.includes(letter)
 
         if (!isCorrectLetter) {
-            return "rgb(58,58,60)";
+            return darkgray;
         }
 
         const letterInThatPosition = word.charAt(index);
         const isCorrectPosition = letter === letterInThatPosition;
 
         if (isCorrectPosition) {
-            return "rgb(83,141,78)";
+            return green;
         }
-        return "rgb(181,159,59)";
+        return yellow;
     }
 
     function handleSubmitWord() {
+
         const currentWordArr = getCurrentWordArray();
-        if (currentWordArr.length !== wordLength) {
+        if (currentWordArr.length !== wordLength && guessedWords.length < (wordLength + 1)) {
             window.alert("Word must be " + wordLength + " letters");
             return;
         }
@@ -61,6 +69,17 @@ document.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => {
                 const tileColor = getTileColor(letter, index);
 
+                const keyboardKey = document.getElementById(letter);
+
+                if (tileColor === yellow) {
+                    if (getComputedStyle(keyboardKey).getPropertyValue('background-color') != green) {
+                        keyboardKey.style = `background-color: ${tileColor};border-color${tileColor}`;
+                    }
+                }
+                else {
+                    keyboardKey.style = `background-color: ${tileColor};border-color${tileColor}`;
+                }
+
                 const letterID = firstLetterId+index;
                 const letterEl = document.getElementById(letterID);
                 letterEl.classList.add("animate__flipInX");
@@ -71,13 +90,25 @@ document.addEventListener("DOMContentLoaded", () => {
         guessedWordCount+=1;
 
         if (currentWord === word) {
+            gameOver = true;
             setTimeout(() => {
                 window.alert("Congratulations!")
             }, 200+(200*wordLength));
+            return;
         }
 
         if (guessedWords.length === (wordLength + 1)) {
-            window.alert("Sorry, you have no more guesses")
+            gameOver = true;
+            if (flip) {
+                setTimeout(() => {
+                    window.alert("Sorry, you have no more guesses!")
+                }, 200+(200*wordLength));
+                flip = false;
+            }
+            else {
+                window.alert("Sorry, you have no more guesses!")
+            }
+            return;
         }
 
         guessedWords.push([])
@@ -85,14 +116,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function handleDel() {
         const currentWordArr = getCurrentWordArray();
-        const removedLetter = currentWordArr.pop();
-        
-        guessedWords[guessedWords.length - 1] = currentWordArr;
+        if (currentWordArr.length > 0) {
+            currentWordArr.pop();
+            
+            guessedWords[guessedWords.length - 1] = currentWordArr;
 
-        const lastLetterEl = document.getElementById(String(availableSpace - 1));
+            const lastLetterEl = document.getElementById(String(availableSpace - 1));
 
-        lastLetterEl.textContent = '';
-        availableSpace = availableSpace - 1;
+            lastLetterEl.textContent = '';
+            availableSpace = availableSpace - 1;
+        }
     }
 
 
@@ -109,23 +142,54 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    for (let index = 0; index < keys.length; index++) {
-        keys[index].onclick = ({ target }) => {
-            const letter = target.getAttribute("data-key");
+    function pressedLetter(pressed) {
 
-            if (letter === 'enter') {
+        if (!gameOver) {
+            if (pressed === 'enter') {
                 handleSubmitWord();
-                return
+                return;
             }
 
-            if (letter === 'del') {
+            else if (pressed === 'del') {
                 handleDel();
-                return
+                return;
             }
 
-            updateGuessedWords(letter);
-        };  
+            updateGuessedWords(pressed);
+        }
     }
 
+
+    function start() {
+        let letter = '';
+
+        document.addEventListener("click", (e) => {
+            e.preventDefault();
+            // console.log(e.target.getAttribute('data-key'));
+            if (e.target.getAttribute('data-key') != null) {
+                letter = e.target.getAttribute('data-key');
+    
+                pressedLetter(letter);
+            }
+        })
+    
+        document.addEventListener("keyup", (e) => {
+                
+            if (e.code.slice(0,3) === "Key") {
+                letter = e.code[3].toLowerCase()
+                pressedLetter(letter);
+            }
+            else if (e.code === "Backspace") {
+                letter = 'del'
+                pressedLetter(letter);
+            }
+            else if (e.code === "Enter") {
+                letter = 'enter';
+                pressedLetter(letter);
+            }
+        })
+    }
+
+    start();
 
 });
