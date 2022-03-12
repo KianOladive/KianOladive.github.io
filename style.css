@@ -106,7 +106,7 @@ header {
 }
 
 .quick-intro {
-    background-image: url('intro-bg-2.png');
+    background-image: url('media/intro-bg-2.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: center center;
@@ -277,6 +277,11 @@ header {
     position: relative;
 }
 
+.project-text-eleven { 
+    grid-row: 33 / span 1;
+    position: relative;
+}
+
 /* ======================================= pictures */
 
 .project-pic {  
@@ -353,6 +358,13 @@ header {
 .tenth-pic {
     grid-column: 3 / span 6;
     grid-row: 29 / span 3;
+    margin: 3rem 0;
+    position: relative;
+}
+
+.eleventh-pic {
+    grid-column: 8 / span 6;
+    grid-row: 32 / span 3;
     margin: 3rem 0;
     position: relative;
 }
