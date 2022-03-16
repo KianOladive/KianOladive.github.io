@@ -22,7 +22,7 @@
                 <p id='landing-page-text'> All Things <span> Kian </span> </p>
                 <a href="index.html" id="top-button"> RETURN </a>
             </div>
-            <img id="pic2" src= "pic3.jpg"  data-aos="fade-right">
+            <img id="pic2" src= "media/pic3.jpg"  data-aos="fade-right">
         </div>
 
         <div class="about-section" id='about'>
@@ -56,7 +56,7 @@
 
             <div class="abt-pic" data-aos="fade-up-right">
                 <a href="https://ppces.depedmandaluyong.org/about" target="_blank">
-                    <img src = "pedro.jpg">
+                    <img src = "media/pedro.jpg">
                 </a>
             </div>
             <div class="pedro-text" data-aos="fade-up-left">
@@ -69,7 +69,7 @@
 
             <div class="abt-pic" data-aos="fade-up-right">
                 <a href="https://cmshs.depedmandaluyong.org/" target="_blank">
-                    <img src = "mandsci.png">
+                    <img src = "media/mandsci.png">
                 </a>
             </div>
             <div class="mandsci-text" data-aos="fade-up-left">
@@ -87,7 +87,7 @@
 
             <div class="abt-pic" data-aos="fade-up-right">
                 <a href="https://www.ateneo.edu/" target="_blank">
-                    <img src = "admu.jpg">
+                    <img src = "media/admu.jpg">
                 </a>
             </div>
             <div class="admu-text" data-aos="fade-up-left">
@@ -111,7 +111,7 @@
 
                 <div class="box hobby-1">
                     <div class="imgBx">
-                        <img src="bike.jpg">
+                        <img src="media/bike.jpg">
                     </div>
                     <div class="content">
                         <h2>Cycling</h2>
@@ -121,7 +121,7 @@
 
                 <div class="box hobby-2">
                     <div class="imgBx">
-                        <img src="cubing.jpg">
+                        <img src="media/cubing.jpg">
                     </div>
                     <div class="content">
                         <h2>Cubing</h2>
@@ -141,7 +141,7 @@
 
                 <div class="box hobby-4">
                     <div class="imgBx">
-                        <img src="valorant.jpg">
+                        <img src="media/valorant.jpg">
                     </div>
                     <div class="content">
                         <h2> Valorant </h2>
@@ -151,7 +151,7 @@
 
                 <div class="box hobby-5">
                     <div class="imgBx">
-                        <img src="leetcoe.png">
+                        <img src="media/leetcoe.png">
                     </div>
                     <div class="content">
                         <h2> Leetcode </h2>
@@ -161,7 +161,7 @@
 
                 <div class="box hobby-6">
                     <div class="imgBx">
-                        <img src="romcom.jpg">
+                        <img src="media/romcom.jpg">
                     </div>
                     <div class="content">
                         <h2>Watching RomComs</h2>
@@ -171,7 +171,7 @@
 
                 <div class="box hobby-7">
                     <div class="imgBx">
-                        <img src="music.jpg">
+                        <img src="media/music.jpg">
                     </div>
                     <div class="content">
                         <h2> Music </h2>
@@ -181,7 +181,7 @@
 
                 <div class="box hobby-8">
                     <div class="imgBx">
-                        <img src="youtube.jpg">
+                        <img src="media/youtube.jpg">
                     </div>
                     <div class="content">
                         <h2> YouTube </h2>
@@ -210,6 +210,16 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+    <script>
+        window.addEventListener('scroll', function () {
+            let header = document.querySelector('header');
+            
+            header.classList.toggle('header-scrolled', window.scrollY > 10);
+
+            const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+            header.classList.toggle('header-scrolled-to-end', window.scrollY >= scrollableHeight);
+        })
     </script>
 
 
