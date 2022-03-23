@@ -42,7 +42,7 @@ header {
     display: grid;
     /* length of word here  */
     /* ----------------------------------------------------------------------------------------------------------------------------------------------------- */
-    grid-template-columns: repeat(5, 1fr); 
+    grid-template-columns: repeat(8, 1fr); 
     grid-gap: 5px;
     padding: 10px;
     box-sizing: border-box;

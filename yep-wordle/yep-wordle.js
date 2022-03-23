@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const word = "yugto";
-    const wordLength = 5;
+    const word = "pagdaong";
+    const wordLength = 8;
 
     createSquares();
 
