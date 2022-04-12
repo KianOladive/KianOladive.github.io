@@ -1,7 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const word = "pagdaong";
-    const wordLength = 8;
+    const container = document.getElementById("container");
+    const winnerContainer = document.getElementById("winner-container");
+
+    const instructionsPic = document.getElementById("inst-pic");
+
+
+    if (window.localStorage.getItem("solved") == "true") {
+        winnerContainer.style = `z-index: 2`;
+        container.style = `opacity: 0`;
+    }
+
+
+    let solved = false;
+
+    const word = "daong";
+    const wordLength = word.length;
 
     createSquares();
 
@@ -89,10 +103,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         guessedWordCount+=1;
 
-        if (currentWord === word) {
+        if (currentWord === word) { 
             gameOver = true;
+            solved = true;
+            window.localStorage.setItem("solved", solved);
             setTimeout(() => {
-                window.alert("Congratulations!")
+                window.alert("You got the word!\nPress OK")
+                location.reload()
             }, 200+(200*wordLength));
             return;
         }
@@ -128,6 +145,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    function showInstructions() {
+        instructionsPic.style = `top: 0`
+    }
+
+    function closeInstructions() {
+        instructionsPic.style = `top: 100%`
+
+    }
+
 
     function createSquares() {
         const gameBoard = document.getElementById("board");
@@ -154,6 +180,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 handleDel();
                 return;
             }
+            
+            else if (pressed === 'instructions') {
+                showInstructions();
+                return;
+            }
+            
+            else if (pressed === 'close-inst') {
+                closeInstructions();
+                return;
+            }
 
             updateGuessedWords(pressed);
         }
@@ -161,6 +197,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     function start() {
+        if (window.localStorage.getItem("solved") == undefined) {
+            window.localStorage.setItem("solved", solved);
+        }
+
+        if (window.localStorage.getItem("solved") == "true") {
+            return;
+        }
+
         let letter = '';
 
         document.addEventListener("click", (e) => {
@@ -189,6 +233,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         })
     }
+
 
     start();
 

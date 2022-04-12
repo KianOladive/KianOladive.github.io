@@ -5,8 +5,9 @@
 
 html, body {
     height: 100%;
-    background-color: black;
+    background-color: rgb(84, 84, 114);
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    overflow: hidden;
 }
 
 #container {
@@ -15,87 +16,183 @@ html, body {
     height: 100%;
     align-items: center;
     flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+#inst-pic {
+  position: absolute;
+  top: 100%;
+  height: 100vh;
+  width: 100vw;
+
+  background-color: rgba(64, 64, 64, 0.423);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#inst-pic img {
+  width: min(90vw, 500px);
+}
+
+#close-inst {
+  height: 100vh;
+  width: 100vw;
+
+  background-color: transparent;
+  border: 0px solid transparent;
+
+  position: absolute;
+}
+
+#instructions {
+  position: absolute;
+  top: calc(2px + 0.4rem);
+  left: 15px;
+
+  height: clamp(16px, 4vw, 28px)
+}
+
+#instructions button {
+  background-color: black;
+  height: clamp(28px, 4vw, 36px);
+  width: clamp(28px, 4vw, 36px);
+  border: 3px solid rgb(177, 177, 177);
+
+  font-size: clamp(14px, 4vw, 18px);
+  font-weight: bold;
+
+  color: white;
+  border-radius: 50%;
+}
+
+#instructions button:hover {
+  color: rgb(83, 141, 78);
+  border-color: rgb(83, 141, 78);
+}
+
+#game {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;  
+  align-items: center;
 }
 
 header {
-    border-bottom: 1px solid rgb(58,58,60);
+  width: 98vw;
+  border-bottom: 1px solid rgb(58,58,60);
 }
 
 .title {
-    color: gainsboro;
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin: 0.4rem 0 0.4rem 0;
-    text-align: center;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: gainsboro;
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: bold;
+  margin: 0.4rem 0 0.4rem 0;
+  text-align: center;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
 #board-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-    overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 #board {
-    display: grid;
-    /* length of word here  */
-    /* ----------------------------------------------------------------------------------------------------------------------------------------------------- */
-    grid-template-columns: repeat(8, 1fr); 
-    grid-gap: 5px;
-    padding: 10px;
-    box-sizing: border-box;
+  display: grid;
+  /* length of word here  */
+  /* ----------------------------------------------------------------------------------------------------------------------------------------------------- */
+  grid-template-columns: repeat(5, 1fr); 
+  grid-gap: 5px;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .square {
-    border: 2px solid rgb(58,58,60);
-    min-width: 60px;
-    min-height: 60px;
-    font-size: 50px;
-    font-weight: bold;
-    color: gainsboro;
-    text-transform: uppercase;
+  border: 2px solid rgb(58,58,60);
+  min-width: min(55px, calc((100vw - 100px)/5));
+  min-height: min(55px, calc((100vw - 100px)/5));
+  font-size: min(50px, calc((100vw - 150px)/5));
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: gainsboro;
+  text-transform: uppercase;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #keyboard-container {
     height: 200px;
-    min-width: 500px;
-  }
-  
-  .keyboard-row {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: 0 auto 8px;
-    touch-action: manipulation;
-  }
-  
-  .keyboard-row button {
-    font-family: inherit;
-    font-weight: bold;
-    border: 0;
-    padding: 0;
-    height: 58px;
-    cursor: pointer;
-    background-color: rgb(129, 131, 132);
-    color: rgb(215, 218, 220);
-    flex-grow: 1;
-    text-transform: uppercase;
-    margin-right: 6px;
-    border-radius: 4px;
-    user-select: none;
-  }
-  
-  .keyboard-row button.wide-button {
-    flex-grow: 1.5;
-  }
-  
-  .spacer-half {
-    flex-grow: 0.5;
-  }
+    width: min(450px, 100vw - 40px);
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto 8px;
+  touch-action: manipulation;
+}
+
+.keyboard-row button {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  border: 0;
+  padding: 0;
+  height: 58px;
+  cursor: pointer;
+  background-color: rgb(129, 131, 132);
+  color: rgb(215, 218, 220);
+  flex-grow: 1;
+  text-transform: uppercase;
+  margin-right: 6px;
+  border-radius: 4px;
+  user-select: none;
+}
+
+.keyboard-row button:hover {
+  filter: brightness(150%);
+}
+
+.keyboard-row button.wide-button {
+  flex-grow: 1.5;
+}
+
+.spacer-half {
+  flex-grow: 0.5;
+}
+
+#winner-container {
+  background-color: white;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow:hidden;
+}
+
+.main-text {
+  text-align: center;
+  font-size: clamp(32px, 6vw, 60px);
+  width: min(600px, 100vw - 12rem);
+}
+
+#subtext {
+  position: absolute;
+  top: 0;
+
+  text-align: center;
+  margin: 0 2rem;
+}
 
