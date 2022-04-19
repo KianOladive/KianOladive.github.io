@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let guessedWords = [[]];
     let availableSpace = 1;
     let flip = true;
+    let flipping = false;
 
     const yellow = "rgb(181, 159, 59)";
     const darkgray = "rgb(58, 58, 60)";
@@ -29,6 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let gameOver = false;
     let guessedWordCount = 0;
+
+    const animationDuration = 1.5;
 
     const keys = document.querySelectorAll(".keyboard-row button");
 
@@ -80,6 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const interval = 200;
         currentWordArr.forEach((letter, index) => {
+            flipping = true
             setTimeout(() => {
                 const tileColor = getTileColor(letter, index);
 
@@ -101,6 +105,13 @@ document.addEventListener("DOMContentLoaded", () => {
             }, interval * index);
         });
 
+        
+        if (flipping) {
+            setTimeout(() => {
+                flipping = false;
+            }, wordLength*interval)
+        }
+
         guessedWordCount+=1;
 
         if (currentWord === word) { 
@@ -108,9 +119,12 @@ document.addEventListener("DOMContentLoaded", () => {
             solved = true;
             window.localStorage.setItem("solved", solved);
             setTimeout(() => {
-                window.alert("You got the word!\nPress OK")
-                location.reload()
-            }, 200+(200*wordLength));
+                // window.alert("You got the word!\nPress OK")
+                congratsAnimation()
+                setTimeout(() => {
+                    location.reload()
+                }, animationDuration*1000 + 300);
+            }, 500+(200*wordLength));
             return;
         }
 
@@ -118,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
             gameOver = true;
             if (flip) {
                 setTimeout(() => {
-                    window.alert("Sorry, you have no more guesses!")
+                    window.alert("Sorry, you have no more guesses!\n You can try again by refreshing this page!")
                 }, 200+(200*wordLength));
                 flip = false;
             }
@@ -170,7 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function pressedLetter(pressed) {
 
-        if (!gameOver) {
+        if (!gameOver && !flipping) {
             if (pressed === 'enter') {
                 handleSubmitWord();
                 return;
@@ -196,6 +210,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+    function congratsAnimation() {
+        const animateDiv = document.getElementById("animate")
+        gsap.to(animateDiv, {duration: animationDuration, y: '-100%'})
+    }
+
+
     function start() {
         if (window.localStorage.getItem("solved") == undefined) {
             window.localStorage.setItem("solved", solved);
@@ -206,7 +226,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         let letter = '';
-
         document.addEventListener("click", (e) => {
             e.preventDefault();
             // console.log(e.target.getAttribute('data-key'));
@@ -232,6 +251,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 pressedLetter(letter);
             }
         })
+        
     }
 
 
