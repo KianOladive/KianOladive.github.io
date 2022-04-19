@@ -8,41 +8,71 @@
         <!-- logos -->
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <title> Kian's Personal Website </title>
-        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="style.css" type="text/css" defer>
         <link rel="shortcut icon" type="image/x-icon" href="media/favicon.ico" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js" defer></script>
+        <script src="app.js" defer></script>
     </head>
     <body>
+         <div id="real-intro">
+             <div class="real-intro-container">
+                <h1 class="hide">
+                  <span class="text">Hi there.</span>
+                </h1>
+                <h1 class="hide">
+                  <span class="text">Welcome to my</span>
+                </h1>
+                <h1 class="hide">
+                  <span class="text">website.</span>
+                </h1>
+             </div>
+         </div>
+
+         <div id="slider"></div>
+
         <header>
             <center>
-                <a href="#hone" class="nav-text">HOME</a>
-                <a href="#my-projects" class="nav-text">PROJECTS</a>
-                <a href="#contact" class="nav-text">CONTACT</a>
+                <a href="#hone" class="nav-text" data-aos="fade-up">HOME</a>
+                <a href="#my-projects" class="nav-text" data-aos="fade-up">PROJECTS</a>
+                <a href="#contact" class="nav-text" data-aos="fade-up">CONTACT</a>
             </center>
         </header>
 
         <div class='landing' id='hone'>
-            <img id='first-pic' src='media/person.jpg' data-aos="fade-left">
-            <div class="landing-page-elements" data-aos="fade-right">
-                <p id="hi"> Hi! I'm </p>
-                <p id="name"> Kian Oladive </p>
-                <a href="about.html" id="first-button"> ALL THINGS KIAN </a>
+            <img id='first-pic' src='media/person.webp' data-aos="fade-right" data-aos-delay="3000">
+            <div class="landing-page-elements">
+                <p id="hi"> Greetings! I'm </p>
+                <div id="name">
+                    <div id="type-animation">
+
+                    </div>
+                     Kian Oladive 
+                </div>
+                <div id="button-container">
+                    <a href="about.html" id="first-button"> ALL THINGS KIAN </a>
+                </div>
+                
             </div>
         </div>
          
-        <div class='quick-intro'> 
-            <p id='intro-intro' data-aos="fade-down"> Thanks for paying me a visit! </p>
-            <p class='intro-text' data-aos="fade-down"> Hey there! I’m glad you found your way to my personal website. 
-                I’m Kian Oladive, a 3rd Year Computer Science major from Ateneo de Manila University. 
-                If you wanna learn more about what I’m like, what I like, 
-                and just general things about me, feel free to click the button below. </p>
-            <a href="about.html" id="second-button" data-aos="fade-up"> MORE ABOUT ME </a>
-            <p class='intro-text' data-aos="fade-up"> The following section will contain a list of some of my past projects. </p>
+        <div class="quick-intro-container">
+            <div id="animate-bg"></div>
+            <div class='quick-intro'> 
+                <p id='intro-intro' data-aos="fade-down"> Thanks for paying me a visit! </p>
+                <p class='intro-text' data-aos="fade-down"> Hey there! I’m glad you found your way to my personal website. 
+                    I’m Kian Oladive, a 3rd Year Computer Science major from Ateneo de Manila University. 
+                    If you wanna learn more about what I’m like, what I like, 
+                    and just general things about me, feel free to click the button below. </p>
+                <a href="about.html" id="second-button" data-aos="fade-up"> MORE ABOUT ME </a>
+                <p class='intro-text' data-aos="fade-up"> The following section will contain a list of some of my past projects. </p>
+            </div>
+
         </div>
         
         <div class="projects" id="my-projects">
             <h1 class='project-header' data-aos="fade-up"> My Projects </h1>
         
-            <div class = "first-pic picz-odd" data-aos="fade-right"> 
+            <div class = "first-pic picz-odd" data-aos="zoom-in"> 
                 <img class='project-pic front' src = "media/maze.png">
                 <a href="https://youtu.be/ifOsLfSKrQo" target="_blank"><h3> Learn More </h3></a>
             </div>
@@ -54,7 +84,7 @@
                     on a preset maze grid, and input their desired directions. </p>
             </div>
         
-            <div class = "twoth-pic picz-even" data-aos="fade-left"> 
+            <div class = "twoth-pic picz-even" data-aos="zoom-in"> 
                 <img class='project-pic front' src = "media/java-gui.png">
                 <a href="https://youtu.be/NT1RDLfs6UM" target="_blank"><h3> Learn More </h3></a>
             </div>
@@ -66,7 +96,7 @@
                     though. </p>
             </div>
         
-            <div class = "third-pic picz-odd" data-aos="fade-right"> 
+            <div class = "third-pic picz-odd" data-aos="zoom-in"> 
                 <img class='project-pic front' src = "media/bujo.png">
                 <a href="https://youtu.be/M4aoXDYf6JQ" target="_blank"><h3> Learn More </h3></a>
             </div>
@@ -78,7 +108,7 @@
                     backend development. </p>
             </div>
         
-            <div class = "fourth-pic picz-even" data-aos="fade-left"> 
+            <div class = "fourth-pic picz-even" data-aos="zoom-in"> 
                 <img class='project-pic front' src = "media/qb.png">
                 <a href="https://youtu.be/yxQfNkMkfnE" target="_blank"><h3> Learn More </h3></a>
             </div>
@@ -93,7 +123,7 @@
                     where up to three students can call dibs and earn stars for the questboard. </p>
             </div>
         
-            <div class = "fifth-pic picz-odd" data-aos="fade-right"> 
+            <div class = "fifth-pic picz-odd" data-aos="zoom-in"> 
                 <img class='project-pic front' src = "media/calendar.jpg">
                 <h3> Learn More </h3>
             </div>
@@ -106,7 +136,7 @@
                     created schedules based on user data. </p>
             </div>
         
-            <div class = "sixth-pic picz-even" data-aos="fade-left"> 
+            <div class = "sixth-pic picz-even" data-aos="zoom-in"> 
                 <img class='project-pic front' src = "media/blue-mark.png">
                 <a href="https://youtu.be/qsCkKyCJkfU" target="_blank"><h3> Learn More </h3></a>
             </div>
@@ -120,7 +150,7 @@
                     statement. </p>
             </div>
         
-            <div class = "seventh-pic picz-odd" data-aos="fade-right"> 
+            <div class = "seventh-pic picz-odd" data-aos="zoom-in"> 
                 <img class='project-pic front' src = "media/website.jpg">
                 <a href="old website/index.html" target="_blank"><h3> Visit my website </h3></a>
             </div>
@@ -133,7 +163,7 @@
                     my finished projects to this site.  </p>
             </div>  
         
-            <div class = "eigth-pic picz-even" data-aos="fade-left"> 
+            <div class = "eigth-pic picz-even" data-aos="zoom-in"> 
                 <img class='project-pic front' src = "media/lifestyletracker.png">
                 <a href="https://youtu.be/uKMo16frXX0" target="_blank"><h3> Learn More </h3></a>
             </div>
@@ -145,7 +175,7 @@
                     depending on the user's diet.  </p>
             </div>  
 
-            <div class = "ninth-pic picz-odd" data-aos="fade-right"> 
+            <div class = "ninth-pic picz-odd" data-aos="zoom-in"> 
                 <img class='project-pic front' src = "media/wordle.jpg">
                 <a href="yep-wordle/yep-wordle.html" target="_blank"><h3> Play </h3></a>
             </div>
@@ -155,7 +185,7 @@
                     we will ask participants to solve a particular word (the event's theme)  </p>
             </div>  
 
-            <div class = "tenth-pic picz-even" data-aos="fade-left"> 
+            <div class = "tenth-pic picz-even" data-aos="zoom-in"> 
                 <img class='project-pic front' src = "media/wordle2.png">
                 <a href="wordle-streaks/wordle-streaks.html" target="_blank"><h3> Play </h3></a>
             </div>
@@ -168,16 +198,18 @@
                     they want. This game keeps the player's current streak.  </p>
             </div>  
         
-            <div class = "eleventh-pic picz-odd" data-aos="fade-right"> 
+            <!-- <div class = "eleventh-pic picz-odd" data-aos="fade-right"> 
                 <img class='project-pic front' src = "media/qmark.jpg">
                 <h3> Coming Soon... </h3>
             </div>
             <div class="project-text-eleven odd" data-aos="fade-left">
                 <h2>Coming Soon...</h2>
-            </div>  
+            </div>   -->
         </div>
         
         <div class='footer' id="contact">
+            <div id="footer-bg-animate"></div>
+
             <h4 data-aos="fade-up"> Connect With Me. </h4>
             <ul>
                 <li>
@@ -269,15 +301,5 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
-    </script>
-    <script>
-        window.addEventListener('scroll', function () {
-            let header = document.querySelector('header');
-            
-            header.classList.toggle('header-scrolled', window.scrollY > 10);
-
-            const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
-            header.classList.toggle('header-scrolled-to-end', window.scrollY >= scrollableHeight);
-        })
     </script>
 </html>
