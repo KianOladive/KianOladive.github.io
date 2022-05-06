@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index-styles.css">
+    <script src="app.js" defer></script>
+    <title>Verdant Cooperative</title>
+</head>
+<body>
+    <nav class="nav-bar">
+        <a class="verdant-logo" href="index.html">
+            <img class="logo" src="img/logo.png" alt="">
+        </a>
+        <input type="checkbox" class="burger-toggle" id="burger-toggle">
+        <label for="burger-toggle" class="burger-toggle-label">
+            <span></span>
+        </label>
+        <div class="elements-container">
+            <ul class="nav-elements">
+              <li class="nav-bar-element"><a href="index.html">Home</a></li>
+              <li class="nav-bar-element"><a href="about-us.html">About Us</a></li>
+              <li class="nav-bar-element"><a href="news.html">News</a></li>
+              <li class="nav-bar-element"><a href="membership.html">Membership</a></li>
+              <li class="nav-bar-element"><a href="products.html">Products</a></li>
+              <li class="nav-bar-element"><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <style>
+        .carousel-item {
+            height: 90vh;
+        }
+    </style>
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+            <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active img1">
+                <div class="container"></div>
+            </div>
+            <div class="carousel-item img2">
+                <div class="container"></div>
+            </div>
+            <div class="carousel-item img3">
+                <div class="container"></div>
+            </div>       
+        </div>
+        <a href="#myCarousel" class="carousel-control-prev" role="button" data-slide="prev">
+            <span class="sr-only">Previous</span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a href="#myCarousel" class="carousel-control-next" role="button" data-slide="next">
+            <span class="sr-only">Next</span>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+        <div class="verdant-intro">
+            <h3 data-aos="fade-right">This is</h3>
+            <h1 data-aos="fade-left" data-aos-delay="400" data-aos-duration="500">Verdant Cooperative</h1>
+            <p data-aos="fade-right">Verdant Agriculture Cooperative aims to boost the Cacao farming industry in Bicol. We help the local farmers by giving them agricultural assistance and by producing cacao products from our humble farmers.</p>
+        </div>
+    </div>
+
+    <div class="verdant-social">
+        <h1 data-aos="fade-up">We are a social enterprise</h1>
+        <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit suscipit qui vitae nulla magnam aliquam vel voluptas aperiam voluptate tenetur asperiores odit quis, architecto, laboriosam amet ipsa iste ex neque!</p>
+        <a  data-aos="fade-up" href="about-us.html" style="text-decoration: underline!important;">Read more about us</a>
+    </div>
+
+
+
+    <div class="landing-news">
+        <h3 data-aos="fade-up">News and Announcements</h3>
+        <a href="#">
+            <div class="landing-news-element">
+                <img data-aos="fade-right" src="img/2.jpg" alt="">
+                <div class="news-content" data-aos="fade-left">
+                    <h4>More products coming soon</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit suscipit qui vitae nulla magnam aliquam vel voluptas aperiam voluptate tenetur asperiores odit quis, architecto, laboriosam amet ipsa iste ex neque!</p>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="landing-news-element">
+                <img data-aos="fade-right" src="img/news_1.png" alt="">
+                <div data-aos="fade-left" class="news-content">
+                    <h4>More products coming soon</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit suscipit qui vitae nulla magnam aliquam vel voluptas aperiam voluptate tenetur asperiores odit quis, architecto, laboriosam amet ipsa iste ex neque!</p>
+                </div>
+            </div>
+        </a>
+        <a href="#">
+            <div class="landing-news-element">
+                <img data-aos="fade-right" src="img/4.jpg" alt="">
+                <div data-aos="fade-left" class="news-content">
+                    <h4>More products coming soon</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit suscipit qui vitae nulla magnam aliquam vel voluptas aperiam voluptate tenetur asperiores odit quis, architecto, laboriosam amet ipsa iste ex neque!</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <footer>
+        <div class="footer-row">
+            <div class="footer-column" id="col1" data-aos="fade-right" >
+                <a href="#"><h1 class="footer-verdant">VERDANT<br>COOPERATIVE</h1></a>
+                <p>Copyright Verdant Cooperative 2022</p>
+            </div>
+            <div class="footer-column" id="col2" data-aos="fade-left" >
+                <ul class="footer-column-elements">
+                    <li class="column-elements"><a href="#"><strong>Explore</strong></a></li>
+                    <li class="column-elements"><a href="#">About Us</a></li>
+                    <li class="column-elements"><a href="#">News</a></li>
+                    <li class="column-elements"><a href="#">Membership</a></li>
+                    <li class="column-elements"><a href="#">Products</a></li>
+                    <li class="column-elements"><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column" id="col3" data-aos="fade-left" >
+                <ul class="footer-column-elements">
+                    <li class="column-elements"><a href="#"><strong>Follow Verdant</strong></a></li>
+                    <li class="column-elements"><a href="#">Facebook</a></li>
+                    <li class="column-elements"><a href="#">Instagram</a></li>
+                    <li class="column-elements"><a href="#">Shopee</a></li>
+                </ul>
+            </div>
+            <div class="footer-column" id="col4" data-aos="fade-left" >
+                <ul class="footer-column-elements">
+                    <li class="column-elements"><a href="#"><strong>Shop Our Products</strong></a></li>
+                    <li class="column-elements"><a href="#">Roasted Cacao Nibs</a></li>
+                    <li class="column-elements"><a href="#">Tabrilya</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+<script>
+    AOS.init();
+  </script>
+</html>

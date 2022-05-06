@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact-styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="app.js" defer></script>
+    <title>Verdant Cooperative</title>
+</head>
+<body>
+    <nav class="nav-bar">
+        <a class="verdant-logo" href="index.html">
+            <img class="logo" src="img/logo.png" alt="">
+        </a>
+        <input type="checkbox" class="burger-toggle" id="burger-toggle">
+        <label for="burger-toggle" class="burger-toggle-label">
+            <span></span>
+        </label>
+        <div class="elements-container">
+            <ul class="nav-elements">
+              <li class="nav-bar-element"><a href="index.html">Home</a></li>
+              <li class="nav-bar-element"><a href="about-us.html">About Us</a></li>
+              <li class="nav-bar-element"><a href="news.html">News</a></li>
+              <li class="nav-bar-element"><a href="membership.html">Membership</a></li>
+              <li class="nav-bar-element"><a href="products.html">Products</a></li>
+              <li class="nav-bar-element"><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="contact-container">
+        <div class="contact-heading" data-aos="fade-up" data-aos-duration="1500">
+            <span>Contact Us</span>
+        </div>
+
+        <div class="contact-content">
+            <div class="contact-left-col" data-aos="fade-left" data-aos-duration="1100">
+                <div class="map-location">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3878.717908839525!2d123.19757861482827!3d13.552888590476428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a18db85bc50ce9%3A0x13e37ede5ab95ee3!2sVerdant%20Agriculture%20Cooperative!5e0!3m2!1sen!2sph!4v1651088120123!5m2!1sen!2sph" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+    
+            <div class="contact-right-col" data-aos="fade-right">
+                <div class="fb-column">
+                    <div class="avatar">
+                        <span class="fa fa-facebook"></span>
+                    </div>
+                    <span class="label">Facebook</span>
+                    <span class="details">fb.com/[verdant-link]</span>
+                </div>
+        
+                <div class="phone-column">
+                    <span class="fa fa-phone"></span>
+                    <span class="label">Phone</span>
+                    <span class="details">0908 552 0486</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="message-us">
+        <div class="message-us-elements">
+            <h1 class="message-title" data-aos="fade-up">Leave us a message!</h1>
+            <p class="message-description" data-aos="fade-up">If you wish to be become a member of Verdant Agri Cooperative, please do not send a message, here – instead, please click on the Membership tab and proceed with the instructions so we can review your application. Thank you!</p>
+            <ul class="business-hours" data-aos="fade-up">
+                <li class="business-hours-element">Business Hours:</li>
+                <li class="business-hours-element">Mon:	8:00 AM – 9:00 PM</li>
+                <li class="business-hours-element">Tue:	8:00 AM – 9:00 PM</li>
+                <li class="business-hours-element">Wed:	8:00 – 9:00 PM</li>
+                <li class="business-hours-element">Thu:	8:00 AM – 9:00 PM</li>
+                <li class="business-hours-element">Fri:	8:00 – 9:00 PM</li>
+                <li class="business-hours-element">Sat:	Closed</li>
+                <li class="business-hours-element">Sun:	Closed</li>
+            </ul>
+        </div>
+        <div class="message-us-form">
+            <form action="mailto:jimenezjames907@gmail.com" method="post" enctype="text/plain">
+                <div class="name-field fields" data-aos="fade-up">
+                    <label for="name">Name</label><br>
+                    <input type="text" id="name" name="name" value=""><br>
+                </div>
+
+                <div class="phone-field fields" data-aos="fade-up">
+                    <label for="phone-number">Phone Number</label><br>
+                    <input type="text" id="phone-number" name="phone-number" value=""><br>
+                </div>
+
+                <div class="email-field fields" data-aos="fade-up">
+                    <label for="email">Email</label><br>
+                    <input type="text" id="email" name="email" value=""><br>
+                </div>
+
+                <div class="message-field fields" data-aos="fade-up">
+                    <label for="message">What can we help you with?</label><br>
+                    <textarea type="text" id="message" name="message" value=""></textarea><br><br>
+                </div>
+                <div class="button-container" data-aos="fade-right" data-aos-duration="700">
+                    <input class="submit-button" type="submit" value="Send Message">
+                </div>
+            </form> 
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-row">
+            <div class="footer-column" id="col1" data-aos="fade-right" >
+                <a href="#"><h1 class="footer-verdant">VERDANT<br>COOPERATIVE</h1></a>
+                <p>Copyright Verdant Cooperative 2022</p>
+            </div>
+            <div class="footer-column" id="col2" data-aos="fade-left" >
+                <ul class="footer-column-elements">
+                    <li class="column-elements"><a href="#"><strong>Explore</strong></a></li>
+                    <li class="column-elements"><a href="#">About Us</a></li>
+                    <li class="column-elements"><a href="#">News</a></li>
+                    <li class="column-elements"><a href="#">Membership</a></li>
+                    <li class="column-elements"><a href="#">Products</a></li>
+                    <li class="column-elements"><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column" id="col3" data-aos="fade-left" >
+                <ul class="footer-column-elements">
+                    <li class="column-elements"><a href="#"><strong>Follow Verdant</strong></a></li>
+                    <li class="column-elements"><a href="#">Facebook</a></li>
+                    <li class="column-elements"><a href="#">Instagram</a></li>
+                    <li class="column-elements"><a href="#">Shopee</a></li>
+                </ul>
+            </div>
+            <div class="footer-column" id="col4" data-aos="fade-left" >
+                <ul class="footer-column-elements">
+                    <li class="column-elements"><a href="#"><strong>Shop Our Products</strong></a></li>
+                    <li class="column-elements"><a href="#">Roasted Cacao Nibs</a></li>
+                    <li class="column-elements"><a href="#">Tabrilya</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    AOS.init();
+  </script>
+</html>

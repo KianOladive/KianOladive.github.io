@@ -1,0 +1,204 @@
+.contact-container {
+    height: 90vh;
+    background-color: #457B2F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+.contact-heading {
+    font-size: var(--main-heading);
+    font-weight: bold;
+    padding-bottom: 1em;
+}
+
+.contact-content {
+    width: 100%;
+    padding: 0 72px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+.contact-left-col, .contact-right-col {
+    flex: 1 1 49%;
+    /* border: 3px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.contact-right-col {
+    padding: 2em;
+    flex-wrap: wrap;
+}
+
+.map-location {
+    overflow: hidden;
+    height: clamp(200px, 25vw, 500px);
+    width: clamp(300px, 100%, 650px);
+    border-radius: 25px;
+}
+
+.fb-column, .phone-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar {
+    /* height: 100px;
+    width: 100px; */
+}
+
+.fa::before {
+    font-size: clamp(32px, 4vw, 100px);;
+}
+
+.label {
+    text-align: center;
+    padding-bottom: 1em;
+    font-size: clamp(16px, 2vw, 50px);
+}
+
+.details {
+    white-space: nowrap;
+    font-size: clamp(12px, 1.5vw, 20px);
+}
+
+/* second part of page */
+
+
+.message-us {
+    display: flex;
+    min-height: fit-content;
+    background-color: #f8f8f8;
+    flex-wrap: wrap;
+}
+
+.message-us-elements, .message-us-form {
+    flex: 1 1 100%;
+    padding: 72px;
+}
+
+.message-us-elements {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+    background-color: #dddddd;
+    min-width: min(100%, 450px);
+}
+
+.message-us-form {
+    flex: 1 1 50%;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    min-height: fit-content;
+}
+
+.message-description {
+    font-weight: bold;
+}
+
+.message-title {
+    color: #457B2F;
+    font-size: var(--sub-heading);
+}
+
+.business-hours-element:first-child {
+    font-weight: bold;
+}
+
+form {
+    width: 100%;
+    min-height: fit-content;
+}
+
+label {
+    font-weight: bold;
+}
+
+input {
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px;
+}
+
+#name:hover, #phone-number:hover, #email:hover, #message:hover{
+    background-color: #ebebeb;
+}
+
+#name, #phone-number, #email, #message {
+    background-color: #dddddd;
+    border: none;
+    height: 2em;
+    width: 80%;
+}
+
+#message {
+    height: 8em;
+    resize: none;
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px;
+}
+
+.fields {
+    padding-bottom: 1.5em;
+}
+
+.submit-button {
+    display: flex;
+    background-color: #457B2F;
+    color: white;
+    height: 3em;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: center;
+    border: none;
+    width: 80%;
+    font-weight: bold;
+    z-index: 6;
+    position: relative;
+    transition: .3s;
+}
+
+.button-container::after {
+    content: '';
+    background-color: #bebebe;
+    height: 100%;
+    width: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.button-container {
+    position: relative;
+}
+
+.submit-button:hover {
+    transform: translate(-8px, -8px);
+    cursor: pointer;
+}
+
+nav, footer {
+    overflow: hidden;
+}
+
+@media screen and (max-width: 600px) {
+.message-us-elements, .message-us-form {
+    padding: 40px;
+}
+
+.contact-content {
+    padding: 0 40px;
+}
+}
+
