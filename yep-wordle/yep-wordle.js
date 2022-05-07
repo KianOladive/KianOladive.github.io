@@ -53,21 +53,50 @@ document.addEventListener("DOMContentLoaded", () => {
         };
     }
 
-    function getTileColor(letter, index) {
-        const isCorrectLetter = word.includes(letter)
-
-        if (!isCorrectLetter) {
-            return darkgray;
-        }
-
+    function getTileColor(letter, index, currentWordArr) {
+        const currentWord = currentWordArr.join('')
         const letterInThatPosition = word.charAt(index);
+        const isCorrectLetter = word.includes(letter)
         const isCorrectPosition = letter === letterInThatPosition;
 
+        var appearsElsewhere = false;
+        var indexOfFirstAppearance = 5;
+        var appearances = [];
+
+
+        appearances.push(index)
+        for (let i=0; i<currentWordArr.length; i++) {
+            if (letter == currentWord[i]) {
+                indexOfFirstAppearance = Math.min(indexOfFirstAppearance, i)
+            }
+            if (letter == currentWord[i] && index != i) {
+                appearsElsewhere = true;
+                appearances.push(i)
+            }
+        }
+        console.log(appearances)
+
+        // conditionals
         if (isCorrectPosition) {
             return green;
         }
+        else if (appearsElsewhere) {
+            if (index != indexOfFirstAppearance) {
+                return darkgray;
+            }
+            for (var i=0; i<appearances.length; i++) {
+                if (index != i && letter == word.charAt(i)) {
+                    return darkgray;
+                }
+            }
+        }
+        else if (!isCorrectLetter) {
+            return darkgray;
+        }
         return yellow;
     }
+
+    //function whichLetter()
 
     function handleSubmitWord() {
 
@@ -85,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
         currentWordArr.forEach((letter, index) => {
             flipping = true
             setTimeout(() => {
-                const tileColor = getTileColor(letter, index);
+                const tileColor = getTileColor(letter, index, currentWordArr);
 
                 const keyboardKey = document.getElementById(letter);
 
@@ -223,6 +252,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (window.localStorage.getItem("solved") == "true") {
             return;
+        }
+
+        // if it's their first time visiting the site, show instructions div
+        if (!window.localStorage.getItem("first_time")) {
+            instructionsPic.style = `top: 0`
+            window.localStorage.setItem("first_time", false)
         }
 
         let letter = '';
