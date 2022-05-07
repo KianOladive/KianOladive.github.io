@@ -62,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
         var appearsElsewhere = false;
         var indexOfFirstAppearance = 5;
         var appearances = [];
+        var greenSomewhereElse = false;
 
 
         appearances.push(index)
@@ -77,21 +78,22 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(appearances)
 
         // conditionals
-        if (isCorrectPosition) {
+        if (!isCorrectLetter) {
+            return darkgray;
+        }
+        else if (isCorrectPosition) {
             return green;
         }
         else if (appearsElsewhere) {
-            if (index != indexOfFirstAppearance) {
-                return darkgray;
-            }
-            for (var i=0; i<appearances.length; i++) {
-                if (index != i && letter == word.charAt(i)) {
-                    return darkgray;
+            for (let i=0; i<appearances.length; i++) {
+                if (currentWord[appearances[i]] == word.charAt(appearances[i])) {
+                    greenSomewhereElse = true;
                 }
             }
-        }
-        else if (!isCorrectLetter) {
-            return darkgray;
+            // if not the first of that letter in the current word or if it's green somewhere else
+            if (index != indexOfFirstAppearance || greenSomewhereElse) {
+                return darkgray;
+            }
         }
         return yellow;
     }
@@ -119,12 +121,26 @@ document.addEventListener("DOMContentLoaded", () => {
                 const keyboardKey = document.getElementById(letter);
 
                 if (tileColor === yellow) {
-                    if (getComputedStyle(keyboardKey).getPropertyValue('background-color') != green) {
-                        keyboardKey.style = `background-color: ${tileColor};border-color${tileColor}`;
+                    if (getComputedStyle(keyboardKey).getPropertyValue('background-color') == green) {
+                        keyboardKey.style = `background-color: ${green};border-color${green}`;
+                    }
+                    else {
+                        keyboardKey.style = `background-color: ${yellow};border-color${yellow}`;
                     }
                 }
-                else {
-                    keyboardKey.style = `background-color: ${tileColor};border-color${tileColor}`;
+                else if (tileColor === green) {
+                    keyboardKey.style = `background-color: ${green};border-color${green}`;
+                }
+                else if (tileColor === darkgray) {
+                    if (getComputedStyle(keyboardKey).getPropertyValue('background-color') == green) {
+                        keyboardKey.style = `background-color: ${green};border-color${green}`;
+                    }
+                    else if (getComputedStyle(keyboardKey).getPropertyValue('background-color') == yellow) {
+                        keyboardKey.style = `background-color: ${yellow};border-color${yellow}`;
+                    }
+                    else {
+                        keyboardKey.style = `background-color: ${darkgray};border-color${darkgray}`;
+                    }
                 }
 
                 const letterID = firstLetterId+index;
