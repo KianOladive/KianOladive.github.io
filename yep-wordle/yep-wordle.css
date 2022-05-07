@@ -23,22 +23,67 @@ html, body {
     z-index: 1;
 }
 
-#inst-pic {
+#container #inst-pic {
   position: absolute;
   top: 100%;
   height: 100vh;
   width: 100vw;
 
   background-color: rgba(64, 64, 64, 0.423);
+  backdrop-filter: blur(2px);
 
   display: flex;
   justify-content: center;
   align-items: center;
-
+  z-index: 2;
+  transition: .5s;
 }
 
-#inst-pic img {
-  width: min(90vw, 500px);
+#container #inst-pic #content {
+  background-color: #121213;
+  color: gainsboro;
+  padding: 1em;
+  width: clamp(200px, 80vw, 600px);
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+#x-button {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+}
+
+#container #inst-pic #content .title {
+  color: gainsboro;
+  white-space: nowrap;
+  /* margin-bottom: 1.2; */
+  font-size: clamp(14px, 2vw, 20px);
+}
+
+#container #inst-pic #content .text {
+  width: 100%;
+  margin-bottom: 1.5em;
+  font-size: clamp(8px, 2vw, 14px);
+}
+
+#container #inst-pic #content .line {
+  height: 1px;
+  width: 100%;
+  background-color: gainsboro;
+  align-self: center;
+  margin: 0 0 1.2em 0;
+}
+
+#container #inst-pic #content .inst-picture {
+  width: 100%;
+}
+
+#container #inst-pic #content .inst-picture img {
+  height: 5vh;
 }
 
 #close-inst {
@@ -55,6 +100,7 @@ html, body {
   position: absolute;
   top: calc(2px + 0.4rem);
   left: 15px;
+  z-index: 2;
 
   height: clamp(16px, 4vw, 28px)
 }
@@ -83,6 +129,10 @@ html, body {
   height: 100vh;
   justify-content: space-between;  
   align-items: center;
+  background: url("background.png");
+  width: 100vw;
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
 }
 
 header {
@@ -91,12 +141,13 @@ header {
 }
 
 .title {
-  color: gainsboro;
+  color: black;
   font-size: clamp(28px, 4vw, 36px);
   font-weight: bold;
   margin: 0.4rem 0 0.4rem 0;
   text-align: center;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", sans-serif;
+  padding: 0 10vw;
 }
 
 #board-container {
@@ -130,13 +181,18 @@ header {
   font-size: 150%;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
-  color: gainsboro;
   text-transform: uppercase;
 
   display: flex;
   justify-content: center;
   align-items: center;
   user-select: none;
+
+  color: black;
+}
+
+.square-flipped {
+  color: gainsboro !important;
 }
 
 #keyboard-container {
@@ -159,7 +215,7 @@ header {
   padding: 0;
   height: 58px;
   cursor: pointer;
-  background-color: rgb(129, 131, 132);
+  background-color: #6a6a6d;
   color: rgb(215, 218, 220);
   flex-grow: 1;
   text-transform: uppercase;
@@ -181,11 +237,13 @@ header {
 }
 
 #winner-container {
-  background-color: white;
+  background: url("background.png");
+  background-size: 100vw 100vh;
   position: absolute;
   height: 100vh;
   width: 100vw;
-  z-index: -1;
+  z-index: 2;
+  top: -100%;
 
   display: flex;
   justify-content: center;
@@ -195,7 +253,7 @@ header {
 
 .main-text {
   text-align: center;
-  font-size: clamp(32px, 6vw, 60px);
+  font-size: clamp(35px, 6vw, 80px);
   width: min(600px, 100vw - 12rem);
   font-family: "Montserrat", sans-serif;
 }
@@ -205,7 +263,9 @@ header {
   top: 0;
 
   text-align: center;
-  margin: 0 2rem;
+  margin: 2rem;
+  font-weight: bold;
+  font-size: clamp(16px, 2vw, 20px);
 }
 
 #animate {
@@ -214,19 +274,28 @@ header {
   position: absolute;
   z-index: 2;
   
-  background-color: aquamarine;
+  background: url("bg-animate.png") ;
+  background-size: 1920px 100vh;
+  background-position: left center;
+  
 
   display: flex;
   justify-content: center;
   align-items: center;
-
+  /* top: 0; */
   top: 100%;
 }
 
 #animate span {
-  color: blue;
-  text-align: center;
-  font-size: clamp(32px, 6vw, 60px);
+  display: flex;
+  justify-content: center;
+  
+  background-color: rgba(0, 0, 0, 0.432);  
+  backdrop-filter: blur(5px);
+  padding: .2em 0;
+  width: 100vw;
+}
 
-  font-family: "Montserrat", sans-serif;
+#animate span img {
+  width: clamp(300px, 60vw, 700px);
 }

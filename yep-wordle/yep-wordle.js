@@ -146,6 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const letterID = firstLetterId+index;
                 const letterEl = document.getElementById(letterID);
                 letterEl.classList.add("animate__flipInX");
+                letterEl.classList.add("square-flipped")
                 letterEl.style = `background-color: ${tileColor};border-color${tileColor}`;
             }, interval * index);
         });
@@ -166,9 +167,9 @@ document.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => {
                 // window.alert("You got the word!\nPress OK")
                 congratsAnimation()
-                setTimeout(() => {
-                    location.reload()
-                }, animationDuration*1000 + 300);
+                // setTimeout(() => {
+                //     location.reload()
+                // }, animationDuration*1000 + 300);
             }, 500+(200*wordLength));
             return;
         }
@@ -257,23 +258,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function congratsAnimation() {
         const animateDiv = document.getElementById("animate")
-        gsap.to(animateDiv, {duration: animationDuration, y: '-100%'})
+        var tl = gsap.timeline();
+        tl.to(animateDiv, {duration: animationDuration, y: '-100%'})
+        tl.to(document.getElementById("winner-container"), {duration: 1, y: '100%', delay:.7})
+        tl.from(document.getElementsByClassName("main-text"), {y: 200, duration: .5, opacity: 0})
     }
 
 
     function start() {
         if (window.localStorage.getItem("solved") == undefined) {
-            window.localStorage.setItem("solved", solved);
+            window.localStorage.setItem("solved", solved); 
         }
 
         if (window.localStorage.getItem("solved") == "true") {
-            return;
+            document.getElementById("winner-container").style = `top: 0 !important;`;
         }
 
         // if it's their first time visiting the site, show instructions div
         if (!window.localStorage.getItem("first_time")) {
-            instructionsPic.style = `top: 0`
-            window.localStorage.setItem("first_time", false)
+            setTimeout(() => {
+                instructionsPic.style = `top: 0`
+                window.localStorage.setItem("first_time", false)
+            }, 2000); // sleep for 2 seconds for animation
         }
 
         let letter = '';

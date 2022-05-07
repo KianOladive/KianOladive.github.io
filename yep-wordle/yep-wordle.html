@@ -1,10 +1,14 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YEP Theme Wordle</title>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="yep-wordle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js"></script>
@@ -18,7 +22,7 @@
   <body>
 
     <div id="animate">
-      <span>Congratulations</span>
+      <span><img src="congrats-text.png" alt=""></span>
     </div>
 
     <div id="winner-container">
@@ -34,24 +38,44 @@
     <div id="container">
 
       <div id="inst-pic">
-        <img src="instructions.png" alt="">
+        <div id="content">
+          <div id="x-button"><span>X</span></div>
+          <h1 class="title"> HOW 2 PLAY</h1>
+          <p class="text">Guess this year's YEP name in six tries</p>
+          <p class="text">Hit the enter button to submit your 5-letter word</p>
+          <p class="text">Afer each guesss, the color of the tiles will change to show how close your guess was to the word.</p>
+
+          <div class="line"></div>
+
+          <p class="text">Examples</p>
+          <div class="inst-picture"><img src="weary.png" alt=""></div>
+          <p class="text">The letter <b>W</b> is in the word and in the correct spot</p>
+          <div class="inst-picture"><img src="pills.png" alt=""></div>
+          <p class="text">The letter <b>I</b> is in the word but in the wrong spot</p>
+          <div class="inst-picture"><img src="vague.png" alt=""></div>
+          <p class="text">The letter <b>U</b> is not in the word in any spot</p>
+
+          <div class="line"></div>
+
+          <p class="text"><b>Guess correctly, follow the next instructions, and get a chance to win the prize!</b></p>
+        </div>
         <button id="close-inst" data-key="close-inst"></button>
       </div>
 
-      <div id="instructions">
+      <div id="instructions" data-aos="fade-right" data-aos-duration="900" data-aos-delay="500">
         <button id="instructions-button" data-key="instructions">?</button>
       </div>
       
       <div id="game">
         <header>
-          <h1 class="title">Wordle: YEP Name</h1>
+          <h1 class="title" data-aos="fade-up" data-aos-duration="900">Guess this year's YEP name!</h1>
         </header>
 
-        <div id="board-container">
+        <div id="board-container" data-aos="fade-up" data-aos-duration="900" data-aos-delay="150">
           <div id="board"></div>
         </div>
 
-        <div id="keyboard-container">
+        <div id="keyboard-container" data-aos="fade-up" data-aos-duration="900" data-aos-delay="400">
           <div class="keyboard-row">
             <button id="q" data-key="q">q</button>
             <button id="w" data-key="w">w</button>
@@ -93,4 +117,7 @@
     </div>
 
   </body>
+  <script>
+    AOS.init();
+  </script>
 </html>
