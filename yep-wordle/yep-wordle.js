@@ -259,8 +259,8 @@ document.addEventListener("DOMContentLoaded", () => {
     function congratsAnimation() {
         const animateDiv = document.getElementById("animate")
         var tl = gsap.timeline();
-        tl.to(animateDiv, {duration: animationDuration, y: '-100%'})
-        tl.to(document.getElementById("winner-container"), {duration: 1, y: '100%', delay:.7})
+        tl.to(animateDiv, {duration: animationDuration, y: '-150%'})
+        tl.to(document.getElementById("winner-container"), {duration: 1, y: '150%', delay:.7})
         tl.from(document.getElementsByClassName("main-text"), {y: 200, duration: .5, opacity: 0})
     }
 
