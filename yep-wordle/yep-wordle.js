@@ -259,8 +259,8 @@ document.addEventListener("DOMContentLoaded", () => {
     function congratsAnimation() {
         const animateDiv = document.getElementById("animate")
         var tl = gsap.timeline();
-        tl.to(animateDiv, {duration: animationDuration, y: '-150%'})
-        tl.to(document.getElementById("winner-container"), {duration: 1, y: '150%', delay:.7})
+        tl.to(animateDiv, {duration: animationDuration, x: '-100%'})
+        tl.to(document.getElementById("winner-container"), {duration: 1, x: '100%', delay:.7})
         tl.from(document.getElementsByClassName("main-text"), {y: 200, duration: .5, opacity: 0})
     }
 
@@ -271,7 +271,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (window.localStorage.getItem("solved") == "true") {
-            document.getElementById("winner-container").style = `top: 0 !important;`;
+            document.getElementById("winner-container").style = `left: 0 !important;`;
         }
 
         // if it's their first time visiting the site, show instructions div
