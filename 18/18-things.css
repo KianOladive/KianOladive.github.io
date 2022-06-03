@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+
+*, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+.card {
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.opening-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.opening-text, .ending-text {
+    font-size: 24px;
+    margin: 10px;
+    text-align: center; 
+}
+
+.content {
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+
+    display: flex;
+}
+
+.number, .text-container {
+    flex: 1 1 50%;
+}
+
+.number {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 300px;
+    -webkit-text-stroke: 1px black;
+
+    /* border: 1px solid black; */
+    margin: 5%;
+
+}
+
+.text-container {
+    /* border: 1px solid black; */
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    font-size: 2em;
+    margin-bottom: 1em;
+    font-family: "Ropa Sans", sans-serif;
+}
+
+.even {
+    flex-direction: row-reverse;
+}
+
+.even .text-container .body-text, .even .text-container .title {
+    text-align: right;
+}
+
+.even .number {
+    justify-content: left;
+}
+
+.final {
+    justify-content: start;
+}
+
+.opening {
+    background-color: #B6E2DD;
+}
+
+.one {
+    background-color: #C8DDBB;
+}
+
+.two {
+    background-color: #E9E5AF;
+}
+
+.three {
+    background-color: #FBDF9D;
+}
+
+.four {
+    background-color: #FBC99D;
+}
+
+.five {
+    background-color: #FBB39D;
+}
+
+.six {
+    background-color: #FBA09D;
+}
+
+.seven {
+    background-color: #B6E2DD;
+}
+
+.eight {
+    background-color: #C8DDBB;
+}
+
+.nine {
+    background-color: #E9E5AF;
+
+}
+
+.ten {
+    background-color: #FBDF9D;
+}
+
+.eleven {
+    background-color: #FBC99D;
+}
+
+.twelve {
+    background-color: #FBB39D;
+}
+
+.thirteen {
+    background-color: #FBA09D;
+}
+
+.fourteen {
+    background-color: #B6E2DD;
+}
+
+.fifteen {
+    background-color: #C8DDBB;
+}
+
+.sixteen {
+    background-color: #E9E5AF;
+
+}
+
+.second-final {
+    background-color: #FBDF9D;
+}
+
+.final {
+    background-color: #FBC99D;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+
+
+
+/* 
+numbers on left and right (alternating)
+numbers are going to fade down from top
+pin numbers as scrolling down
+*/
