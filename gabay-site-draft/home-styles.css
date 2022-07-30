@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;800&family=Montserrat:wght@700&family=Roboto:wght@300;400;700&display=swap');
+
+/* Roboto: 300, 400, 700 */
+/* Barlow: 300, 400, 800 */
+
+@font-face {
+    font-family: 'Myriad Pro reg';
+    src: url('fonts/Myriad\ Pro\ Regular.ttf');
+}
+@font-face {
+    font-family: 'Myriad Pro bold';
+    src: url('fonts/Myriad\ Pro\ Bold.ttf');
+}
+
+:root {
+    /* --main-heading: clamp(35px, 6vw, 80px);
+    --sub-heading: clamp(30px, 3vw, 50px); */
+    --body-text: clamp(16px, 2vw, 20px); 
+    --default-padding: 100px;
+    --green: #008860;
+    --cream: #E5DFAD;
+    --title-size: 128px;
+    --heading: clamp(35px, 6vw, 96px);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: gray;
+}
+
+#container {
+    
+}
+
+.black-layer {
+    background-color: black;
+    opacity: 75%;
+}
+
+
+/* ---------- PROGRESS BAR ---------- */
+
+
+#progress-bar {
+    height: 4px;
+    width: 100vw;
+    background-color: transparent;
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+}
+
+#progress {
+    --progress: 0;
+    width: var(--progress);
+    height: 100%;
+    background-color: white;
+}
+
+
+/* ---------- LOADER ---------- */
+
+#loader {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 1001;
+    background-color: var(--green);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Barlow', sans-serif;
+}
+
+#loader-greeting {
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#loader-loading {
+    font-size: 24px;
+}
+
+#loading-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loading-animation > span {
+    color: white;
+    font-size: 80px;
+    line-height: .5em;
+    animation: bounce 0.3s infinite alternate;
+}
+
+#loading-animation > span:nth-child(2) {
+    color: var(--cream);
+    animation-delay: .1s;
+}
+
+#loading-animation > span:nth-child(3) {
+    animation-delay: .2s;
+}
+
+@keyframes bounce {
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* ---------- NAVBAR ---------- */
+
+.navbar {
+    background-color: transparent;
+    height: 64px; /* open to change */
+    width: calc(100% - calc(2*var(--default-padding)));
+    padding: 0 var(--default-padding);
+    overflow: hidden;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    transition: .4s ease-in-out;
+
+    z-index: 1000;
+}
+
+.navbar-scrolled {
+    background-color: var(--green);
+    box-shadow: 0 6px 4px -1px rgba(0,0,0,.5);
+}
+
+#gabay-logo { 
+    position: relative;
+    height: 80%;
+}
+
+#gabay-logo > img {
+    height: 100%;
+    width: 100%;
+}
+
+#navbar-links > a {
+    text-decoration: none;
+    color: white;
+    margin-left: 50px;
+    position: relative;
+    font-size: 18px;
+    font-family: 'Barlow', sans-serif;
+}
+
+
+#navbar-links > a:hover::after {
+    width: 100%;
+}
+
+
+#navbar-links > a::after {
+    content: '';
+    height: 3px;
+    width: 0%;
+    background-color: white;
+    position: absolute;
+    transform: translateY(1.5em);
+    left: 0;
+    transition: .25s ease-in-out;
+}
+
+.full-view-height {
+    height: 100vh;
+}
+
+/* ---------- LANDING PAGE ---------- */
+
+#landing-page {
+    background-image: url(assets/2\ Neofight.webp); 
+    background-size: cover;
+    background-position: 0 -150px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* #landing-bg {
+    height: 100%;
+    width: 100%;
+    background-image: url(assets/2\ Neofight.webp);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+
+    z-index: 0;
+} */
+
+#landing-black-layer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    z-index: 1;
+}
+
+#landing-heading {
+    color: var(--green);
+    font-family: 'Myriad Pro bold';
+    font-size: var(--title-size);
+    line-height: .8em;
+    user-select: none;
+
+    z-index: 2;
+}
+
+#landing-subheading {
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    font-size: 36px;
+    user-select: none;
+
+    z-index: 2;
+}
+
+
+/* ---------- INTRODUCTION PAGE ---------- */
+
+#introduction {
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 0 var(--default-padding);
+    position: relative;
+}
+
+#intro-grid-container {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 1fr repeat(3, 3fr) 1fr;
+}
+
+#question-mark {
+    position: absolute;
+    top: 0;
+    left: -50px;
+    line-height: .85em;
+    color: black;
+    opacity: 22%;
+    font-size: 500px;
+    font-family: 'Montserrat', sans-serif;
+    transform: rotate(20deg);
+    user-select: none;
+}
+
+#intro-heading {
+    display: flex;
+    color: var(--green);
+    font-size: var(--heading);
+    grid-column: 1 / 9;
+    grid-row: 2;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    padding-bottom: 20px;
+    
+    font-family: 'Barlow', sans-serif;
+    font-weight: 800;
+    z-index: 1;
+}
+
+#gabay-video {
+    grid-column: 1 / 9;
+    grid-row: 3 / 5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    z-index: 1;
+    /* width: 100%;
+    padding-bottom: 56.25%; 
+    height: 0; */
+}
+
+#gabay-video iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+#intro-square {
+    background-color: var(--cream);
+    grid-column: 6 / 11;
+    grid-row: 2 / 4;
+
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    z-index: 0;
+}
+
+#intro-girl {
+    grid-column: 9 / 13;
+    grid-row: 2 / 5;
+    z-index: 1;
+    position: relative;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+#intro-girl > img {
+    height: 100%;
+    user-select: none;
+}
+
+
+/* ---------- SERVICES PAGE ---------- */
+
+#services {
+    height: fit-content;
+    background-color: var(--green);
+    padding: var(--default-padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#services-heading {
+    color: white;
+    font-size: var(--heading);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 800;
+    width: 100%;
+    text-align: center;
+}
+
+#services-cards {
+    display: flex;
+    flex-wrap: wrap;
+    width: fit-content;
+    gap: 12px;
+}
+
+.card {
+    flex: 0 1 calc(calc(100% - 24px)/3);
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 550px;
+    width: 200px;
+}
+
+.card-header {
+    height: 40%;
+    position: relative;
+}
+
+.services-bg-pic {
+    height: 100%;
+}
+
+.services-bg-pic > img{
+    width: 100%;
+    height: 100%;
+}
+
+.services-black-layer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+}
+
+.services-card-logo {
+    position: absolute;
+    top: 0;
+    margin: auto;
+}
+
+.card-body {
+    height: 60%;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-text {
+
+}
+
+.card-title {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+}
+
+.card-content {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+/* .card-button {
+    width: fit-content;
+    padding: 8px 20px;
+    border: 3px solid var(--green);
+    border-radius: 122px;
+    position: relative;
+}
+
+.card-button > a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    z-index: 1;
+}
+
+.moving-pane {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: var(--green);
+    border-radius: 122px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.card-button > a:hover {
+    color: white;
+} */
+
+.card-button {
+    width: fit-content;
+    padding: 8px 20px;
+    border: 3px solid var(--green);
+    border-radius: 122px;
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    z-index: 10000;
+    transition: 0.3s ease-in-out;
+}
+
+.moving-pane {
+    color: transparent;
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    background-color: var(--green);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+    white-space: nowrap;
+}
+
+.card-button:hover > .moving-pane {
+    width: 100%;
+    color: white;
+}
+
+.card-button:hover > #orig-text-button {
+    color: white;
+}
