@@ -28,8 +28,56 @@ window.addEventListener('scroll', function () {
     landingPage.style.backgroundPositionY = (window.scrollY*0.7)-150 + "px"
 })
 
-const timeline = gsap.timeline({ defaults: { ease: "power1.out" } });
+function cardHoverOne() {
+    document.getElementById("project-card-one-desc").style = `display: flex;`
+}
 
+function cardHoverOneOut() {
+    document.getElementById("project-card-one-desc").style = `display: none;`
+}
+
+function cardHoverTwo() {
+    document.getElementById("project-card-two-desc").style = `display: flex;`
+}
+
+function cardHoverTwoOut() {
+    document.getElementById("project-card-two-desc").style = `display: none;`
+}
+
+function cardHoverThree() {
+    document.getElementById("project-card-three-desc").style = `display: flex;`
+}
+
+function cardHoverThreeOut() {
+    document.getElementById("project-card-three-desc").style = `display: none;`
+}
+
+function cardHoverFour() {
+    document.getElementById("project-card-four-desc").style = `display: flex;`
+}
+
+function cardHoverFourOut() {
+    document.getElementById("project-card-four-desc").style = `display: none;`
+}
+
+function cardHoverFive() {
+    document.getElementById("project-card-five-desc").style = `display: flex;`
+}
+
+function cardHoverFiveOut() {
+    document.getElementById("project-card-five-desc").style = `display: none;`
+}
+
+function cardHoverSix() {
+    document.getElementById("project-card-six-desc").style = `display: flex;`
+}
+
+function cardHoverSixOut() {
+    document.getElementById("project-card-six-desc").style = `display: none;`
+}
+
+// loader animations
+const timeline = gsap.timeline({ defaults: { ease: "power1.out" } });
 window.addEventListener("load", function() {
     timeline.to("#loader", {y: "-100vh", duration: .5})
     timeline.from("#landing-heading", {y: 200, duration: .7, opacity: 0})

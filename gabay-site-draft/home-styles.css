@@ -19,6 +19,7 @@
     --default-padding: 100px;
     --green: #008860;
     --cream: #E5DFAD;
+    --gray: #E6E6E6;
     --title-size: 128px;
     --heading: clamp(35px, 6vw, 96px);
 }
@@ -496,3 +497,119 @@ body {
 .card-button:hover > #orig-text-button {
     color: white;
 }
+
+/* ---------- SERVICES PAGE ---------- */
+
+#projects {
+    display: flex;
+    background-color: white;
+    padding: var(--default-padding) var(--default-padding) 0 var(--default-padding);
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    height: fit-content;
+}
+
+#cream-square-projects {
+    background-color: var(--cream);
+    height: 500px;
+    width: 700px;
+    position: absolute;
+    z-index: 0;
+    border-radius: 15px;
+    top: 20%;
+    margin-left: 10%;
+}
+
+#gray-square-projects {
+    background-color: var(--gray);
+    height: 500px;
+    width: 600px;
+    position: absolute;
+    z-index: 0;
+    border-radius: 0 0 15px 15px;
+    top: 0%;
+    left: 40%;
+}
+
+.projects-col {
+    z-index: 2;
+    flex: 1 1 50%;
+    overflow: hidden;
+}
+
+#projects-col-1 {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+
+#projects-vector {
+    width: 83%;
+}
+
+.project-description {
+    height: 80%;
+    width: 90%;
+    position: absolute;
+    box-sizing: border-box;
+    background-color: var(--green);
+    border-radius: 15px;
+    bottom: 10%;
+    margin: 0 auto;
+    display: none;
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#projects-col-2 {
+    box-sizing: border-box;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#projects-heading {
+    color: var(--green);
+    font-size: var(--heading);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 800;
+    text-align: center;
+    width: 100%;
+    margin-bottom: .2em;
+}
+
+#project-cards {
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+}   
+
+.project-single-card {
+    border: 2px solid black;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 15px;
+    aspect-ratio: 1;
+    flex: 0 1 calc(calc(100% - 24px)/3);
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Barlow', sans-serif;
+    user-select: none;
+}
+
