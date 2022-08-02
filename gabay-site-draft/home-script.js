@@ -29,51 +29,51 @@ window.addEventListener('scroll', function () {
 })
 
 function cardHoverOne() {
-    document.getElementById("project-card-one-desc").style = `display: flex;`
+    document.getElementById("project-card-one-desc").style = `animation: showCard .3s ease-in-out forwards;`
 }
 
 function cardHoverOneOut() {
-    document.getElementById("project-card-one-desc").style = `display: none;`
+    document.getElementById("project-card-one-desc").style = `animation: hideCard .2s ease-in-out forwards;`
 }
 
 function cardHoverTwo() {
-    document.getElementById("project-card-two-desc").style = `display: flex;`
+    document.getElementById("project-card-two-desc").style = `animation: showCard .3s ease-in-out forwards;`
 }
 
 function cardHoverTwoOut() {
-    document.getElementById("project-card-two-desc").style = `display: none;`
+    document.getElementById("project-card-two-desc").style = `animation: hideCard .2s ease-in-out forwards;`
 }
 
 function cardHoverThree() {
-    document.getElementById("project-card-three-desc").style = `display: flex;`
+    document.getElementById("project-card-three-desc").style = `animation: showCard .3s ease-in-out forwards;`
 }
 
 function cardHoverThreeOut() {
-    document.getElementById("project-card-three-desc").style = `display: none;`
+    document.getElementById("project-card-three-desc").style = `animation: hideCard .2s ease-in-out forwards;`
 }
 
 function cardHoverFour() {
-    document.getElementById("project-card-four-desc").style = `display: flex;`
+    document.getElementById("project-card-four-desc").style = `animation: showCard .3s ease-in-out forwards;`
 }
 
 function cardHoverFourOut() {
-    document.getElementById("project-card-four-desc").style = `display: none;`
+    document.getElementById("project-card-four-desc").style = `animation: hideCard .2s ease-in-out forwards;`
 }
 
 function cardHoverFive() {
-    document.getElementById("project-card-five-desc").style = `display: flex;`
+    document.getElementById("project-card-five-desc").style = `animation: showCard .3s ease-in-out forwards;`
 }
 
 function cardHoverFiveOut() {
-    document.getElementById("project-card-five-desc").style = `display: none;`
+    document.getElementById("project-card-five-desc").style = `animation: hideCard .2s ease-in-out forwards;`
 }
 
 function cardHoverSix() {
-    document.getElementById("project-card-six-desc").style = `display: flex;`
+    document.getElementById("project-card-six-desc").style = `animation: showCard .3s ease-in-out forwards;`
 }
 
 function cardHoverSixOut() {
-    document.getElementById("project-card-six-desc").style = `display: none;`
+    document.getElementById("project-card-six-desc").style = `animation: hideCard .2s ease-in-out forwards;`
 }
 
 // loader animations

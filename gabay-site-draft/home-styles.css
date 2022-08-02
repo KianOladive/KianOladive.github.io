@@ -398,7 +398,17 @@ body {
 .services-card-logo {
     position: absolute;
     top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-card-logo > img {
+    position: absolute;
     margin: auto;
+    height: 50px;
 }
 
 .card-body {
@@ -498,7 +508,7 @@ body {
     color: white;
 }
 
-/* ---------- SERVICES PAGE ---------- */
+/* ---------- PROJECTS PAGE ---------- */
 
 #projects {
     display: flex;
@@ -558,13 +568,14 @@ body {
     border-radius: 15px;
     bottom: 10%;
     margin: 0 auto;
-    display: none;
     color: white;
     font-family: 'Barlow', sans-serif;
     font-size: 16px;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    opacity: 0;
 }
 
 #projects-col-2 {
@@ -611,5 +622,47 @@ body {
     font-size: 28px;
     font-family: 'Barlow', sans-serif;
     user-select: none;
+    transition: .4s ease-in-out;
+    position: relative;
+    z-index: 3;
+}
+
+.project-single-card:hover {
+    transform: translate(-10px, -10px);
+    background-color: var(--green);
+    color: white;
+    z-index: 2;
+}
+
+/* .project-single-card::before {
+    content: '';
+    background-color: var(--gray);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid black;
+} */
+
+@keyframes showCard {
+    from {
+        transform: translateX(200px);
+    }
+    to {
+        opacity: 100%;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes hideCard {
+    from {
+        transform: translateX(0px);
+        opacity: 100%;
+    }
+    to {
+        opacity: 0%;
+        transform: translateX(-200px);
+    }
 }
 
