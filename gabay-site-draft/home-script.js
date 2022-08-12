@@ -85,3 +85,8 @@ window.addEventListener("load", function() {
     console.log("loaded")
 })
 
+// footer email button
+function sendEmail() {
+    document.getElementById('email-button').click()
+}
+
