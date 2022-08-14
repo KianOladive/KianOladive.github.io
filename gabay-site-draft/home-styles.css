@@ -13,8 +13,9 @@
 }
 
 :root {
-    /* --main-heading: clamp(35px, 6vw, 80px);
-    --sub-heading: clamp(30px, 3vw, 50px); */
+    /* --main-heading: clamp(35px, 6vw, 80px); */
+    --sectonrs-body-heading: clamp(30px, 3vw, 50px);
+    --sectors-body-font-size: clamp(16px, 2vw, 24px);
     --body-text: clamp(16px, 2vw, 20px); 
     --default-padding: 100px;
     --green: #008860;
@@ -189,7 +190,8 @@ body {
 
 #landing-page {
     background-image: url(assets/2\ Neofight.webp); 
-    background-size: cover;
+    background-size: cover; 
+    background-repeat: no-repeat    ;
     background-position: 0 -150px;
 
     display: flex;
@@ -197,17 +199,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
-/* #landing-bg {
-    height: 100%;
-    width: 100%;
-    background-image: url(assets/2\ Neofight.webp);
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-
-    z-index: 0;
-} */
 
 #landing-black-layer {
     position: absolute;
@@ -639,6 +630,7 @@ body {
     height: 50vh; /* change link-container padding if this will be changed */
     display: flex;
     flex-direction: row;
+    position: relative;
 }
 
 #link-container {
@@ -801,6 +793,31 @@ body {
 
 #footer-button:hover > #orig-text-button-footer {
     color: white !important;
+}
+
+#footer-end {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#copyright {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    widtH: 100%;
+    text-align: center;
+    line-height: 2rem;
+    background-color: transparent;
+}
+
+#footer-gradient {
+    height: 1vh;
+    background-image: linear-gradient(to right, var(--green), var(--cream));
 }
 
 

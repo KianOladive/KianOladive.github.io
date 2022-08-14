@@ -20,9 +20,9 @@ window.addEventListener('scroll', function () {
     // parallaxItems.push(document.getElementById('landing-subheading'))
     // parallaxItems.push(document.getElementById('intro-girl'))
 
-    for (let i=0; i<parallaxItems.length; i++) {
-        parallaxItems[i].style.transform = 'translate3d(0px,'+window.scrollY*parallaxItems[i].dataset.rate+'px, 0px)'
-    }
+    // for (let i=0; i<parallaxItems.length; i++) {
+    //     parallaxItems[i].style.transform = 'translate3d(0px,'+window.scrollY*parallaxItems[i].dataset.rate+'px, 0px)'
+    // }
 
     const landingPage = document.getElementById('landing-page')
     landingPage.style.backgroundPositionY = (window.scrollY*0.7)-150 + "px"

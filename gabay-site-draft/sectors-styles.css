@@ -1,0 +1,228 @@
+#sectors-header {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(assets/2\ Neofight.webp); 
+    background-size: cover;
+    position: relative;
+}
+
+.sectors-header-black-layer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.sectors-header-heading {
+    color: white;
+    font-family: 'Myriad Pro bold';
+    font-size: var(--title-size);
+    user-select: none;
+    z-index: 2;
+}
+
+.sectors-sector-content {
+    display: flex !important;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.sectors-sector-image {
+    flex: 1 1 50%;
+    background-color: var(--green);
+    position: relative;
+    overflow: hidden;
+    margin: 0 !important;
+    background-size: cover;
+    background-position: center;
+    transition: .5s ease-in-out;
+}
+
+.sectors-sector-image:hover {
+    transform: scale(1.1);
+}
+
+#sectors-erya {
+    background-image: url(assets/2\ Neofight.webp);
+}
+
+#sectors-scholars {
+    background-image: url(assets/2\ Neofight.webp);
+}
+
+.sectors-about {
+    flex: 1 1 50%;
+    background-color: white;
+    padding: var(--default-padding);
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    font-family: 'Barlow', sans-serif;
+}
+
+.sectors-about > h1 {
+
+}
+
+.sectors-about > p {
+    margin: 1rem 0 3rem 0;
+}
+
+.sectors-button {
+    width: fit-content;
+    color: black;
+    text-decoration: none;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    background-color: white;
+    padding: 4px 24px;
+    border-radius: 112px;
+    border: 3px solid var(--green);
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+    cursor: pointer;
+}
+
+.sectors-moving-pane {
+    position: absolute;
+    background-color: var(--green);
+    width: 0%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    color: transparent !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s ease-in-out;
+    white-space: nowrap;
+}
+
+.sectors-orig-text-button {
+
+}
+
+.sectors-button:hover > .sectors-moving-pane {
+    width: 100%;
+    color: white !important;
+}
+
+.sectors-button:hover > .sectors-orig-text-button {
+    color: white !important;
+}
+
+
+/* -------------------- ERYA -------------------- */
+
+#sectors-erya-header {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(assets/Copy\ of\ erya\ \(334\).webp); 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#sectors-erya-content {
+    padding: var(--default-padding);
+    font-family: 'Barlow', sans-serif;
+    background-color: white;
+}
+
+.sectors-erya-content-heading {
+    padding: 1rem 0;
+    font-size: var(--sectonrs-body-heading);
+}
+
+.sectors-erya-content-body {
+
+}
+
+.sectors-erya-content-body > p {
+    font-size: var(--sectors-body-font-size);
+}
+
+.sectors-erya-content-body > p::after {
+    display: block;
+	white-space: pre-line;
+	content: ".";
+    color: white;
+}
+
+.sectors-erya-content-body-bold {
+    font-weight: 800;
+}
+
+.sectors-erya-content-body-bold::after {
+	content: "" !important;
+}
+
+#sectors-erya-content-body-ul {
+    font-size: var(--sectors-body-font-size);
+    margin: 0 0 1rem 4rem;
+}
+
+
+/* -------------------- SCHOLARS -------------------- */
+
+#sectors-scholars-header {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(assets/2\ Neofight.webp); 
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#sectors-scholars-content {
+    padding: var(--default-padding);
+    font-family: 'Barlow', sans-serif;
+    background-color: white;
+}
+
+.sectors-scholars-content-heading {
+    padding: 1rem 0;
+    font-size: var(--sectonrs-body-heading);
+}
+
+.sectors-scholars-content-body {
+
+}
+
+.sectors-scholars-content-body > p {
+    font-size: var(--sectors-body-font-size);
+}
+
+.sectors-scholars-content-body > p::after {
+    display: block;
+	white-space: pre-line;
+	content: ".";
+    color: white;
+}
+
+.sectors-scholars-content-body-bold {
+    font-weight: 800;
+}
+
+.sectors-scholars-content-body-bold::after {
+	content: "" !important;
+}
+
+#sectors-scholars-content-body-ul {
+    font-size: var(--sectors-body-font-size);
+    margin: 0 0 1rem 4rem;
+}
+
+
+

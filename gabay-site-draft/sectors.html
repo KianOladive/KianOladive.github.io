@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="home-styles.css" defer>
+    <link rel="stylesheet" href="sectors-styles.css" defer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js" defer></script>
+    <script src="sectors-script.js" defer></script>
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <title>Ateneo Gabay</title>
+</head>
+<body>
+    <div id="sectors-container">
+
+        <div id="progress-bar">
+            <div id="progress"></div>
+        </div>
+
+        <div class="navbar">
+            <a id="gabay-logo" href="index.html">
+                <img  src="02 Full Logo - Horizontal (White).png" alt="">
+            </a>
+            <span id="navbar-links">
+                <a href="sectors.html">Sectors</a>
+                <a href="affiliates.html">Affiliates</a>
+                <a href="yabag.html">Yabag</a>
+                <a href="about.html">About</a>
+            </span>
+        </div>
+
+        <div id="sectors-header">
+            <div class="sectors-header-black-layer black-layer"></div>
+            <div class="sectors-header-heading">Our Sectors</div>
+        </div>
+
+        <div class="sectors-sector-content full-view-height">
+            <div id="sectors-erya" class="sectors-sector-image"></div>
+            <div class="sectors-about">
+                <h1>Erya</h1>
+                <p>Founded on the core values of service, paying it forward, and community building, the Gabay Erya (a Tagalized form of "area", a word used to refer to the program's partner schools) Formation Program or the GEFP is a formation program that seeks to enhance the academic skills of public school students. The program accomplishes this goal by providing the Erya kids with free tutorial sessions in Math and English. In the long term, the GEFP aims to inculcate in its beneficiaries the value of education and grant them better access to quality education. Concretely speaking, we conduct academic enrichment programs for these kids by way of weekly Erya insertions.</p>
+
+                <a class="sectors-button" href="sectors-erya.html">
+                    <div class="sectors-moving-pane">LEARN MORE</div>
+                    <div class="sectors-orig-text-button">LEARN MORE</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="sectors-sector-content full-view-height">
+            <div class="sectors-about">
+                <h1>Atenean Scholars</h1>
+                <p>Ateneo Gabay continues to provide a home that serves the scholar sector within the bigger community of the Loyola Schools (LS). From a purely academic nature, Gabay has also been establishing and implementing projects that support the psychosocial adjustment of scholars. Not only does Gabay enhance the academic potential of scholars, but also makes the scholars feel that they belong in the Ateneo.</p>
+
+                <a class="sectors-button" href="sectors-scholars.html">
+                    <div class="sectors-moving-pane">LEARN MORE</div>
+                    <div class="sectors-orig-text-button">LEARN MORE</div>
+                </a>
+            </div>
+            <div id="sectors-scholars" class="sectors-sector-image"></div>
+        </div>
+
+
+        <div id="footer">
+            <div id="link-container">
+
+                <div class="link-column">
+                    <div class="link-categ">Sectors</div>
+                    <div class="footer-link"><a href="#">Erya</a></div>
+                    <div class="footer-link"><a href="#">Atenean Scholars</a></div>
+                </div>
+
+                <div class="link-column">
+                    <div class="link-categ">Affiliates</div>
+                    <div class="footer-link"><a href="#">Kulito</a></div>
+                    <div class="footer-link"><a href="#">TikTok</a></div>
+                    <div class="footer-link"><a href="#">YouTube</a></div>
+                    <div class="footer-link"><a href="#">Gabby the Scholar</a></div>
+                </div>
+
+                <div class="link-column">
+                    <div class="link-categ">Yabag</div>
+                    <div class="footer-link"><a href="#">Newsbrief</a></div>
+                    <div class="footer-link"><a href="#">Magazine</a></div>
+                </div>
+
+                <div class="link-column">
+                    <div class="link-categ">About</div>
+                    <div class="footer-link"><a href="#">Advocacy</a></div>
+                    <div class="footer-link"><a href="#">History</a></div>
+                    <div class="footer-link"><a href="#">Organizational Structure</div>
+                    <div class="footer-link"><a href="#">Offices</a></div>
+                    <div class="footer-link"><a href="#">Committees</a></div>
+                </div>
+
+            </div>
+
+            <div id="contact-container">
+
+                <div id="stay-connected">
+                    <div id="stay-connected-text">Stay Connected:</div>
+                    <a class="stay-connected-links" href="#">
+                        <img src="assets/fb.webp">
+                    </a>
+                    <a class="stay-connected-links" href="#">
+                        <img src="assets/twitter.webp" alt="">
+                    </a>
+                </div>
+
+                <div id="contact-us">
+                    <div id="contact-us-text">Contact Us:</div>
+
+                    <form action="mailto:gabay.ls@obf.ateneo.edu" method="post" enctype="text/plain">
+                        <div id="contact-subject-text-area">
+                            <input type="text" name="subject" id="subject-input-field" placeholder="Subject">
+                        </div>
+
+                        <div id="contact-body-text-area">
+                            <textarea  type="text" rows="6" name="body" id="body-text-area" placeholder="Message"></textarea>
+                        </div>
+
+                        <div>
+                            <input id="email-button" type="submit" value="Send Message">
+                        </div>
+                    </form>
+
+                    <a id="footer-button" onclick="sendEmail()">
+                        <div id="moving-pane-footer">SEND</div>
+                        <div id="orig-text-button-footer">SEND</div>
+                    </a>
+                </div>
+
+            </div>
+
+            
+            <div id="copyright">(C) Ateneo Gabay 2022</div>
+        </div>
+
+        <div id="footer-gradient"></div>
+
+
+
+
+    </div>
+</body>
+<script>
+    AOS.init();
+</script>
+</html>
