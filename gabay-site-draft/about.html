@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="home-styles.css" defer>
+    <link rel="stylesheet" href="about-styles.css" defer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js" defer></script>
+    <script src="half-header-script.js" defer></script>
+    <script src="about-script.js" defer></script>
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <title>Ateneo Gabay</title>
+</head>
+<body>
+    <div id="sectors-container">
+
+        <div id="progress-bar">
+            <div id="progress"></div>
+        </div>
+
+        <div class="navbar">
+            <a id="gabay-logo" href="index.html">
+                <img  src="02 Full Logo - Horizontal (White).png" alt="">
+            </a>
+            <span id="navbar-links">
+                <a href="sectors.html">Sectors</a>
+                <a href="affiliates.html">Affiliates</a>
+                <a href="yabag.html">Yabag</a>
+                <a href="about.html">About</a>
+            </span>
+        </div>
+
+        <div id="about-header">
+            <div class="about-header-black-layer black-layer"></div>
+            <div class="about-header-heading">About Gabay</div>
+        </div>
+
+        <div id="about-content-container">
+            <div id="mission-vision-objectives-container-container">
+                <div id="mission-vision-objectives-heading">
+                    <h1>Tinatanaw, Misyon, Layunin</h1> 
+                    <p>(Vision, Mission, Objectives)</p>
+                </div>
+
+                <div id="mission-vision-objectives-buttons">
+                    <div class="mission-vision-objectives-button about-button-selected" id="about-button-one" onclick="buttonOneSelected()">Tinatanaw</div>
+                    <div class="mission-vision-objectives-button" id="about-button-two" onclick="buttonTwoSelected()">Misyon</div>
+                    <div class="mission-vision-objectives-button" id="about-button-three" onclick="buttonThreeSelected()">Layunin</div>
+                </div>
+
+                <div id="mission-vision-objectives-container">
+                    <div id="mission-container" class="mvo-pane-selected">
+                        <div class="mvo-content-col">
+                            <div class="about-mvo-heading">
+                                Tinatanaw
+                            </div>
+                            <div class="about-mvo-content">
+                                Tinatanaw ng Gabay na maging isang komunidad ng tao-para-sa-kapwa na nagtataya para sa pagkamit at pagtamasa ng bawat indibidwal ng de-kalidad na edukasyon at scholarship.
+                            </div>
+                        </div>
+
+                        <div class="mvo-picture-col">
+                            <img src="assets/undraw_fitting_piece_re_pxay.svg" alt="">
+                        </div>
+                    </div>
+    
+                    <div id="vision-container">
+                        <div class="mvo-picture-col">
+                            <img src="assets/undraw_shared_goals_re_jvqd.svg" alt="">
+                        </div>
+
+                        <div class="mvo-content-col">
+                            <div class="about-mvo-heading">
+                                Misyon
+                            </div>
+                            <div class="about-mvo-content">
+                                Itinataguyod ng Gabay ang pagkahubog at pagkakapatiran ng mga kasapi nito para maging daan sila sa kolektibong pagkilos ng samahan tungo sa pagpapatibay ng mga kakayahang magpapalawig sa oportunidad pang-edukasyon at pan-scholarship ng mga sektor nito--ang mga iskolar ng Ateneo at ang mga mag-aaral ng mga katuwang nitong pampublikong paaralan. Kabilang sa pagkilos ng Gabay para sa mga sektor nito ang paglinang sa kakayahang pang-akademiko nila, pagtugon sa pangangailangang pampakikipag-ugnayan o pampakikiangkop nila, at pagpapalaganap ng pagkilala sa halaga at kalagayan ng pagtaguyod ng edukasyon at scholarship sa Pilipinas.
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div id="objectives-container">
+                        <div class="mvo-content-col">
+                            <div class="about-mvo-heading">
+                                Layunin
+                            </div>
+                            <div class="about-mvo-content">
+                                <p>
+                                <b>Ateneo Scholars</b>
+                                - Magbigay ng suportang pang-akademiko sa mga kasapi at iskolar sa pamamagitan ng direktang serbisyong pang-akademiko, pagtulong sa kanila na maiangkop ang sarili sa komunidad ng Gabay at Ateneo, at paggabay sa kanilang pagtubong ispiritwal.
+                                </p>
+
+                                <p>
+                                <b>Erya Kids</b>
+                                - Mapalawak at mapalalim ang panlipunang kamalayan ng mga kasapi, at direktang matugunan ang tawag ng lipunan sa pamamagitan ng pagbibigay ng suportang pang-akademiko sa mga mag-aaral mula sa mababang pampublikong paaralan.
+                                </p>
+
+                                <p>
+                                <b>Gabayanos</b>
+                                - Mabigyan ng kahandaan ang mga kasapi sa pamamagitan ng paglinang ng iba pang kasanayan at kakayahan.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="mvo-picture-col">
+                            <img src="assets/undraw_right_direction_tge8.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="thrusts-goals">
+                <div id="about-thrust">
+                    <h1>Organizational Thrust</h1>
+                    <p>To enrich the steadfast of the Gabay community through the shaping of an organizatoin that empowers members to live out the advocacy in ever-evolving times</p>
+                </div>
+
+                <div id="about-goals">
+                    <h1>Organizational Goals</h1>
+
+                    <h2>Scholars' Adjustment</h2>
+                    <p>To engage closely with the scholar community by enhancing internal communication systems and offering more opportunities for involvement in projects aimed to serve the sector.</p>
+                    <h2>Education Operations</h2>
+                    <p>To continue advancing quality education by redesigning the internal systems and the learning avenues for Erya Kids while remaining commited to the changing landscape of educadtion</p>
+                    <h2>Member Formation</h2>
+                    <p>To empower Gabayanos to be member-advocates through the formation initiatives catered to the recognition of potential and the development of skills and talents</p>
+                    <h2>Financial Management</h2>
+                    <p>To establish financial freedom in actualizing the organization's advocacy through furthering the sustainability and income-generating capabilities of the fundraising initiatives</p>
+                    <h2>Systems and Service Management</h2>
+                    <p>To utilize and enhance existing systems and protocols for better provision of assistance and resources to members and initiatives</p>
+                    <h2>Externalization</h2>
+                    <p>To fulfill the demands of the current realities of both onsite and online contexts in communicating Ateneo Gabay's advocacy for quality education to its stakeholders</p>
+                    <h2>Member-involvement</h2>
+                    <p>To simplify and strengthen data-driven initiatives in reimagining activities that promotes individual growth and group synergy rooted in the organization's advocacy</p>
+                </div>
+            </div>
+
+            <div id="about-quick-links" class="full-view-height">
+                <a class="about-quick-link" href="about-advocacy.html">
+                    <div class="about-quick-link-avatar">
+                        <img src="assets/advocacy.svg" alt="">
+                    </div>
+                    <div class="about-quick-link-desc">Advocacy</div>
+                </a>
+                
+                <a class="about-quick-link" href="about-history.html">
+                    <div class="about-quick-link-avatar">
+                        <img src="assets/history.svg" alt="">
+                    </div>
+                    <div class="about-quick-link-desc">History</div>
+                </a>
+                
+                <a class="about-quick-link" href="about-org-structure.html">
+                    <div class="about-quick-link-avatar">
+                        <img src="assets/org-structure.svg" alt="">
+                    </div>
+                    <div class="about-quick-link-desc">Organizational Structure</div>
+                </a>
+                
+                <a class="about-quick-link" href="about-offices.html">
+                    <div class="about-quick-link-avatar">
+                        <img src="assets/offices.svg" alt="">
+                    </div>
+                    <div class="about-quick-link-desc">Offices</div>
+                </a>
+                
+                <a class="about-quick-link" href="about-committees.html">
+                    <div class="about-quick-link-avatar">
+                        <img src="assets/committees.svg" alt="">
+                    </div>
+                    <div class="about-quick-link-desc">Committees</div>
+                </a>
+                
+                <a class="about-quick-link" href="https://www.youtube.com/watch?v=w755Ey6al8M" target="_blank">
+                    <div class="about-quick-link-avatar">
+                        <img src="assets/gabay-song.svg" alt="">
+                    </div>
+                    <div class="about-quick-link-desc">Gabay Song</div>
+                </a>
+            </div>
+        </div>
+
+
+        <div id="footer">
+            <div id="link-container">
+
+                <div class="link-column">
+                    <div class="link-categ">Sectors</div>
+                    <div class="footer-link"><a href="#">Erya</a></div>
+                    <div class="footer-link"><a href="#">Atenean Scholars</a></div>
+                </div>
+
+                <div class="link-column">
+                    <div class="link-categ">Affiliates</div>
+                    <div class="footer-link"><a href="#">Kulito</a></div>
+                    <div class="footer-link"><a href="#">TikTok</a></div>
+                    <div class="footer-link"><a href="#">YouTube</a></div>
+                    <div class="footer-link"><a href="#">Gabby the Scholar</a></div>
+                </div>
+
+                <div class="link-column">
+                    <div class="link-categ">Yabag</div>
+                    <div class="footer-link"><a href="#">Newsbrief</a></div>
+                    <div class="footer-link"><a href="#">Magazine</a></div>
+                </div>
+
+                <div class="link-column">
+                    <div class="link-categ">About</div>
+                    <div class="footer-link"><a href="#">Advocacy</a></div>
+                    <div class="footer-link"><a href="#">History</a></div>
+                    <div class="footer-link"><a href="#">Organizational Structure</div>
+                    <div class="footer-link"><a href="#">Offices</a></div>
+                    <div class="footer-link"><a href="#">Committees</a></div>
+                </div>
+
+            </div>
+
+            <div id="contact-container">
+
+                <div id="stay-connected">
+                    <div id="stay-connected-text">Stay Connected:</div>
+                    <a class="stay-connected-links" href="#">
+                        <img src="assets/fb.webp">
+                    </a>
+                    <a class="stay-connected-links" href="#">
+                        <img src="assets/twitter.webp" alt="">
+                    </a>
+                </div>
+
+                <div id="contact-us">
+                    <div id="contact-us-text">Contact Us:</div>
+
+                    <form action="mailto:gabay.ls@obf.ateneo.edu" method="post" enctype="text/plain">
+                        <div id="contact-subject-text-area">
+                            <input type="text" name="subject" id="subject-input-field" placeholder="Subject">
+                        </div>
+
+                        <div id="contact-body-text-area">
+                            <textarea  type="text" rows="6" name="body" id="body-text-area" placeholder="Message"></textarea>
+                        </div>
+
+                        <div>
+                            <input id="email-button" type="submit" value="Send Message">
+                        </div>
+                    </form>
+
+                    <a id="footer-button" onclick="sendEmail()">
+                        <div id="moving-pane-footer">SEND</div>
+                        <div id="orig-text-button-footer">SEND</div>
+                    </a>
+                </div>
+
+            </div>
+
+            
+            <div id="copyright">(C) Ateneo Gabay 2022</div>
+        </div>
+
+        <div id="footer-gradient"></div>
+
+
+
+
+    </div>
+</body>
+<script>
+    AOS.init();
+</script>
+</html>

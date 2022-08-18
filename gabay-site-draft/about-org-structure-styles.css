@@ -1,0 +1,49 @@
+#about-org-structure-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: var(--default-padding);
+
+    background-color: white;
+}
+
+#org-structure-pic {
+    margin-bottom: 2rem;
+}
+
+#org-structure-pic > img {
+    width: 100%;
+}
+
+#org-structure-content-body {
+    font-family: 'Barlow', sans-serif;
+    font-size: var(--sectors-body-font-size);
+}
+
+#org-structure-content-body > p {
+    
+}
+
+#org-structure-content-body > ul {
+    margin-left: 3rem;
+}
+
+#org-structure-content-body > ul:after {
+    content: '.';
+    display: block;
+	white-space: pre-line;
+    color: transparent;
+}
+
+#org-structure-content-body > p:after {
+    content: '.';
+    display: block;
+	white-space: pre-line;
+    color: transparent;
+}
+
+#org-structure-content-body > ul > li {
+    
+}

@@ -1,0 +1,233 @@
+#about-header {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(assets/2\ Neofight.webp); 
+    background-size: cover;
+    position: relative;
+}
+
+.about-header-black-layer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.about-header-heading {
+    color: white;
+    font-family: 'Myriad Pro bold';
+    font-size: var(--title-size);
+    user-select: none;
+    z-index: 2;
+}
+
+#about-content-container {
+    height: fit-content;
+    background-color: white;
+}
+
+#mission-vision-objectives-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: var(--default-padding);
+}
+
+#mission-vision-objectives-heading > h1 {
+    color: var(--green);
+    font-size: var(--heading);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 800;
+    width: 100%;
+    text-align: center;
+}
+
+#mission-vision-objectives-heading > p {
+    color: var(--green);
+    font-size: var(--sectonrs-body-heading);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 800;
+    width: 100%;
+    text-align: center;
+}
+
+#mission-vision-objectives-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.mission-vision-objectives-button {
+    margin: 0 10px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    padding: .3rem 1rem;
+    border-radius: 112px;
+    font-weight: 800;
+    border: 2px solid transparent;
+    user-select: none;
+    cursor: pointer;
+}
+
+.mission-vision-objectives-button:hover {
+    border-color: black;
+}
+
+.about-button-selected {
+    border-color: var(--green);
+}
+
+.about-button-selected:hover {
+    border-color: var(--green) !important;
+}
+
+#mission-vision-objectives-container {
+    height: 80vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mission-container, #vision-container, #objectives-container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 var(--default-padding) var(--default-padding) var(--default-padding);
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    background-color: white;
+    transition: .5s ease-in-out;
+}
+
+.mvo-pane-selected {
+    opacity: 1 !important;
+}
+
+.mvo-content-col {
+    font-family: 'Barlow', sans-serif;
+}
+
+.about-mvo-heading {
+    font-size: var(--sectonrs-body-heading);
+    font-weight: bold;
+    margin-bottom: .8rem;
+}
+
+.about-mvo-content {
+    font-size: var(--sectors-body-font-size);
+}
+
+/* --------------- THRUST AND GOALS --------------- */
+
+ #thrusts-goals {
+    background-color: var(--green);
+    color: white;
+    padding: var(--default-padding);
+ }
+
+ #about-thrust > h1 {
+    font-size: var(--heading);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 800;
+    text-align: center;
+    padding-bottom: 2rem;
+ }
+
+ #about-thrust > p {
+    font-size: var(--sectors-body-font-size);
+    font-family: 'Barlow', sans-serif;
+    text-align: center;
+    padding-bottom: 6rem;
+ }
+
+ #about-goals > h1 {
+    font-size: var(--heading);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 800;
+    text-align: center;
+    padding-bottom: 2rem;
+ }
+
+ #about-goals > h2 {
+    font-size: var(--sectors-body-font-size);
+    font-family: 'Barlow', sans-serif;
+    font-weight: bold;
+ }
+
+ #about-goals > p {
+    font-size: var(--sectors-body-font-size);
+    font-family: 'Barlow', sans-serif;
+ }
+
+ #about-goals > p:after {
+    content: '.';
+    color: transparent;
+    user-select: none;
+    height: 1rem;
+    display: block;
+ }
+
+ /* --------------- QUICK LINKS --------------- */
+#about-quick-links {
+    padding: var(--default-padding);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-quick-link {
+    flex: 0 1 33%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: black;
+
+    transition: .4s ease-in-out;
+}
+
+.about-quick-link:hover {
+    transform: scale(1.1);
+}
+
+.about-quick-link:hover > .about-quick-link-desc {
+    color: var(--green);
+}
+
+.about-quick-link-avatar {
+    height: 250px;
+    overflow: hidden;
+}
+
+.about-quick-link-avatar img {
+    height: 100%;
+    width: 100%;
+}
+
+.about-quick-link-desc {
+    font-size: var(--sectonrs-body-heading);
+    font-family: 'Barlow', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2rem;
+
+    transition: .2s ease-in-out;
+}

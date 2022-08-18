@@ -1,0 +1,49 @@
+#about-history-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-history-content-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.about-history-content-panel-pic {
+    flex: 0 1 35%;
+    width: 35%;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;;
+}
+
+.about-history-content-panel-pic > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.about-history-content-panel-text {
+    flex: 1 0 65%;
+    padding: var(--default-padding);
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'Barlow', sans-serif;
+}
+
+.about-history-content-panel-heading {
+    font-size: 32px;
+    color: var(--green);
+    margin-bottom: 1rem;
+    
+}
+
+.about-history-content-panel-body {
+    font-size: var(--sectors-body-font-size);
+}

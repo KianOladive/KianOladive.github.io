@@ -1,0 +1,149 @@
+#affiliates-header {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(assets/2\ Neofight.webp); 
+    background-size: cover;
+    position: relative;
+}
+
+.affiliates-header-black-layer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.affiliates-header-heading {
+    color: white;
+    font-family: 'Myriad Pro bold';
+    font-size: var(--title-size);
+    user-select: none;
+    z-index: 2;
+}
+
+#affiliates-card-container {
+    height: fit-content;
+    padding: var(--default-padding);
+    /* background-color: var(--green); */
+    background-image: linear-gradient(var(--green), #007250);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.affiliates-card {
+    flex: 0 0 calc(calc(100% - 36px)/4);
+    height: 500px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 30px;
+    border: 3px solid var(--green);
+    overflow: hidden;
+}
+
+.affiliates-card-header {
+    height: 40%;
+    position: relative;
+}
+
+.affiliates-card-bg-pic {
+    height: 100%;
+}
+
+.affiliates-card-bg-pic > img{
+    width: 100%;
+    height: 100%;
+}
+
+.affiliates-card-black-layer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+}
+
+.affiliates-card-logo {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.affiliates-card-logo > img {
+    position: absolute;
+    margin: auto;
+    height: 100px;
+}
+
+.affiliates-card-body {
+    height: 60%;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.affiliates-card-text {
+
+}
+
+.affiliates-card-title {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+}
+
+.affiliates-card-content {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.affiliates-card-button {
+    width: fit-content;
+    padding: 8px 20px;
+    border: 3px solid var(--green);
+    border-radius: 122px;
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    z-index: 10000;
+    transition: 0.3s ease-in-out;
+}
+
+.affiliates-card-moving-pane {
+    color: transparent;
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    background-color: var(--green);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+    white-space: nowrap;
+}
+
+.affiliates-card-button:hover > .affiliates-card-moving-pane {
+    width: 100%;
+    color: white;
+}
+
+.affiliates-card-button:hover > .affiliates-card-orig-text-button {
+    color: white;
+}
