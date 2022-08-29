@@ -1,0 +1,84 @@
+#about-offices-content {
+    display: flex;
+    flex-direction: column;
+    padding: var(--default-padding);
+    background-color: white;
+}
+
+#about-offices-intro {
+    display: flex;
+    flex-direction: column;
+}
+
+#about-offices-intro > h1 {
+    font-size: var(--sectonrs-body-heading);
+    font-family: 'Barlow', sans-serif;
+    color: var(--green);
+    text-align: center;
+}
+
+#about-offices-intro > p {
+    font-size: var(--sectors-body-font-size);
+    font-family: 'Barlow', sans-serif;
+}
+
+#about-offices-card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: calc(var(--default-padding)/2) 10%;
+}
+
+.about-offices-card {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    gap: 2rem;
+    margin: 1rem;
+    background-color: var(--green);
+    border-radius: 30px;
+    width: 100%;
+    overflow: hidden;
+    text-decoration: none;
+    transition: .5s ease-in-out;
+}
+
+.about-offices-card:hover {
+    transform: scale(1.03);
+}
+
+.about-offices-card-pic {
+    
+}
+
+.about-offices-card-pic > img { 
+    height: 250px;
+    border-radius: 30px;
+}
+
+.about-office-card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Barlow', sans-serif;
+    color: white;
+    font-size: var(--sectors-body-font-size);
+}
+
+.about-office-card-text > h2 {
+
+}
+
+.about-office-card-text > p {
+    
+}
+
+
+
+@media screen and (max-width: 700px) {
+    .about-offices-card {
+        flex-direction: column;
+        align-items: center;
+    }
+}

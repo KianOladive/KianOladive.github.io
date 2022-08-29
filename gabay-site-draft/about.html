@@ -10,6 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js" defer></script>
     <script src="half-header-script.js" defer></script>
     <script src="about-script.js" defer></script>
+    <script src="nav-toggle-script.js" defer></script>
 
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -24,16 +25,19 @@
             <div id="progress"></div>
         </div>
 
-        <div class="navbar">
+        <div class="navbar closed-nav">
             <a id="gabay-logo" href="index.html">
                 <img  src="02 Full Logo - Horizontal (White).png" alt="">
             </a>
-            <span id="navbar-links">
+            <span id="navbar-links" class="closed-nav">
                 <a href="sectors.html">Sectors</a>
                 <a href="affiliates.html">Affiliates</a>
                 <a href="yabag.html">Yabag</a>
                 <a href="about.html">About</a>
             </span>
+            <div id="nav-toggle" class="closed-nav">
+                <div id="nav-toggle-bar"></div>
+            </div>
         </div>
 
         <div id="about-header">
@@ -192,32 +196,32 @@
             <div id="link-container">
 
                 <div class="link-column">
-                    <div class="link-categ">Sectors</div>
-                    <div class="footer-link"><a href="#">Erya</a></div>
-                    <div class="footer-link"><a href="#">Atenean Scholars</a></div>
+                    <a class="link-categ" href="sectors.html">Sectors</a>
+                    <div class="footer-link"><a href="sectors-erya.html">Erya</a></div>
+                    <div class="footer-link"><a href="sectors-scholars.html">Atenean Scholars</a></div>
                 </div>
 
                 <div class="link-column">
-                    <div class="link-categ">Affiliates</div>
-                    <div class="footer-link"><a href="#">Kulito</a></div>
-                    <div class="footer-link"><a href="#">TikTok</a></div>
-                    <div class="footer-link"><a href="#">YouTube</a></div>
-                    <div class="footer-link"><a href="#">Gabby the Scholar</a></div>
+                    <a class="link-categ" href="affiliates.html">Affiliates</a>
+                    <div class="footer-link"><a href="https://www.facebook.com/GabayKulito" target="_blank">Kulito</a></div>
+                    <div class="footer-link"><a href="https://www.tiktok.com/@ateneogabay8776" target="_blank">TikTok</a></div>
+                    <div class="footer-link"><a href="https://www.youtube.com/channel/UCOaaA9arbWyQKx6Q3_38ygA" target="_blank">YouTube</a></div>
+                    <div class="footer-link"><a href="https://www.facebook.com/gabbythescholar" target="_blank">Gabby the Scholar</a></div>
                 </div>
 
                 <div class="link-column">
-                    <div class="link-categ">Yabag</div>
-                    <div class="footer-link"><a href="#">Newsbrief</a></div>
-                    <div class="footer-link"><a href="#">Magazine</a></div>
+                    <a class="link-categ" href="yabag.html">Yabag</a>
+                    <div class="footer-link"><a href="coming-soon.html">Newsbrief</a></div>
+                    <div class="footer-link"><a href="yabag-magazine.html">Magazine</a></div>
                 </div>
 
                 <div class="link-column">
-                    <div class="link-categ">About</div>
-                    <div class="footer-link"><a href="#">Advocacy</a></div>
-                    <div class="footer-link"><a href="#">History</a></div>
-                    <div class="footer-link"><a href="#">Organizational Structure</div>
-                    <div class="footer-link"><a href="#">Offices</a></div>
-                    <div class="footer-link"><a href="#">Committees</a></div>
+                    <a class="link-categ" href="about.html">About</a>
+                    <div class="footer-link"><a href="about-advocacy.html">Advocacy</a></div>
+                    <div class="footer-link"><a href="about-history.html">History</a></div>
+                    <div class="footer-link"><a href="about-org-structure.html">Organizational Structure</div>
+                    <div class="footer-link"><a href="about-offices.html">Offices</a></div>
+                    <div class="footer-link"><a href="about-committees.html">Committees</a></div>
                 </div>
 
             </div>

@@ -25,7 +25,7 @@ window.addEventListener('scroll', function () {
     // }
 
     const landingPage = document.getElementById('landing-page')
-    landingPage.style.backgroundPositionY = (window.scrollY*0.7)-150 + "px"
+    landingPage.style.backgroundPositionY = (window.scrollY*0.7) + "px"
 })
 
 function cardHoverOne() {
@@ -80,6 +80,7 @@ function cardHoverSixOut() {
 const timeline = gsap.timeline({ defaults: { ease: "power1.out" } });
 window.addEventListener("load", function() {
     timeline.to("#loader", {y: "-100vh", duration: .5})
+    timeline.from('#landing-page', {scale: 1.4, duration: .8})
     timeline.from("#landing-heading", {y: 200, duration: .7, opacity: 0})
     timeline.fromTo("#landing-subheading", {y: 200, opacity: 0}, {y: 0, opacity: 100, duration: .7, delay: -.5})
     console.log("loaded")
@@ -90,3 +91,15 @@ function sendEmail() {
     document.getElementById('email-button').click()
 }
 
+// navbar burger menu
+const navbarLinks = document.getElementById("navbar-links")
+const navbar = document.querySelector('.navbar')
+const burgerMenu = document.getElementById('nav-toggle')
+document.getElementById("nav-toggle").addEventListener("click", function() {
+    navbarLinks.classList.toggle("open-nav")
+    navbarLinks.classList.toggle("closed-nav")
+    navbar.classList.toggle("open-nav")
+    navbar.classList.toggle("closed-nav")
+    burgerMenu.classList.toggle("open-nav")
+    burgerMenu.classList.toggle("closed-nav")
+})

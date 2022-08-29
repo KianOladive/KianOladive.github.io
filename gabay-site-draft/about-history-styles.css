@@ -11,6 +11,11 @@
     background-color: white;
 }
 
+.about-history-content-panel:nth-child(2),  
+.about-history-content-panel:nth-child(4){
+    background-color: var(--gray);
+}
+
 .about-history-content-panel-pic {
     flex: 0 1 35%;
     width: 35%;
@@ -46,4 +51,22 @@
 
 .about-history-content-panel-body {
     font-size: var(--sectors-body-font-size);
+}
+
+@media screen and (max-width: 800px) {
+
+    .about-history-content-panel:nth-child(1),  
+    .about-history-content-panel:nth-child(3),  
+    .about-history-content-panel:nth-child(5) {
+        flex-direction: column;
+    }
+
+    .about-history-content-panel:nth-child(2),  
+    .about-history-content-panel:nth-child(4) {
+        flex-direction: column-reverse;
+    }
+
+    .about-history-content-panel-pic {
+        width: 100%;
+    }
 }

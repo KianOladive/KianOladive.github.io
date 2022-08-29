@@ -1,0 +1,83 @@
+#yabag-content {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: var(--default-padding);
+}
+
+#yabag-content > img {
+    max-width: 600px;
+    align-self: center;
+}
+
+#yabag-content > h2 {
+    font-family: 'Barlow', sans-serif;
+    font-size: var(--sectors-body-font-size);
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+#yabag-content-button-container {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.yabag-content-button {
+    color: black;
+    text-decoration: none;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    background-color: white;
+    padding: 4px 24px;
+    border-radius: 112px;
+    border: 3px solid var(--green);
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+    cursor: pointer;
+    transform: scale(1.4);
+}
+
+.moving-pane-yabag-content {
+    position: absolute;
+    background-color: var(--green);
+    width: 0%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 112px;
+    color: transparent !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s ease-in-out;
+    white-space: nowrap;
+}
+
+.orig-text-button-yabag-content {
+    text-align: center;
+}
+
+.yabag-content-button:hover > .moving-pane-yabag-content {
+    width: 100%;
+    color: white !important;
+}
+
+.yabag-content-button:hover > .orig-text-button-yabag-content {
+    color: white !important;
+}
+
+
+@media screen and (max-width: 600px) {
+    .yabag-content-button {
+        transform: scale(1);
+    }
+
+    #yabag-content-button-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}

@@ -1,0 +1,95 @@
+#about-advocacy-content {
+    display: flex;
+    flex-direction: column;
+}
+
+#advocacy-modules {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--green);
+    padding: var(--default-padding);
+    gap: 2em;
+}
+
+#advocacy-modules > h1 {
+    color: white;
+    font-size: var(--heading);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 800;
+    width: 100%;
+    text-align: center;
+}
+
+#advocacy-modules-pdf, #advocacy-modules-crash-course {
+    width: 80%;
+    max-width: 1000px;
+    height: 500px;
+    box-shadow: 8px 8px #00000083;
+}
+
+#advocacy-modules-pdf > iframe, #advocacy-modules-crash-course > iframe {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+#advocacy-faqs {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+#advocacy-faqs-content {
+    display: flex;
+    flex-direction: column;
+    padding: var(--default-padding);
+    font-family: 'Barlow', sans-serif;
+    max-width: 1000px;
+}
+
+#advocacy-faqs-content > h1 {
+    color: var(--green);
+    font-size: var(--heading);
+    font-weight: 800;
+    width: 100%;
+    text-align: center;
+    margin-bottom: .5em;
+}
+
+#advocacy-faqs-content > h2 {
+    font-size: var(--sectonrs-body-heading);
+}
+
+#advocacy-faqs-content > p {
+    font-size: var(--sectors-body-font-size);
+}
+
+#advocacy-faqs-content > p::after {
+    content: '.';
+    color: transparent;
+    user-select: none;
+    height: 1rem;
+    display: block;
+}
+
+
+@media screen and (max-width: 800px) {
+
+    #advocacy-modules-pdf, #advocacy-modules-crash-course {
+        width: 100%;
+        height: 350px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+
+    #advocacy-modules-pdf, #advocacy-modules-crash-course {
+        height: 250px;
+    }
+}
+
+
+
+
+

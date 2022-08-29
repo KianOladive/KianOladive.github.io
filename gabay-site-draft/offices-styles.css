@@ -1,0 +1,68 @@
+.offices-header {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(assets/2\ Neofight.webp); 
+    background-size: cover;
+    position: relative;
+}
+
+.offices-header-black-layer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.offices-header-heading {
+    color: white;
+    font-family: 'Myriad Pro bold';
+    font-size: var(--heading);
+    user-select: none;
+    z-index: 2;
+    padding: 0 var(--default-padding);
+    text-align: center;
+}
+
+.offices-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: var(--default-padding);
+}
+
+.offices-content-heading {
+    color: var(--green);
+    font-family: 'Barlow', sans-serif;
+    font-size: var(--heading);
+    padding-bottom: 3rem;
+}
+
+.office-initiative {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Barlow', sans-serif;
+    width: 80%;
+}
+
+.office-initiative > h1 {
+    font-size: var(--sectonrs-body-heading);
+}
+
+.office-initiative > p {
+    font-size: var(--sectors-body-font-size);
+}
+
+.office-initiative > p::after {
+    content: '.';
+    display: block;
+    color: transparent;
+    height: 2rem;
+}
+
+ul {
+    padding-left: 2rem;
+}
+

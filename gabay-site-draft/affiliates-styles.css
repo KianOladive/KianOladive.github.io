@@ -38,7 +38,7 @@
 
 .affiliates-card {
     flex: 0 0 calc(calc(100% - 36px)/4);
-    height: 500px;
+    height: 700px;
     box-sizing: border-box;
     background-color: white;
     border-radius: 30px;
@@ -146,4 +146,30 @@
 
 .affiliates-card-button:hover > .affiliates-card-orig-text-button {
     color: white;
+}
+
+@media screen and (max-width: 1100px) {
+    .affiliates-card {
+        height: 500px;
+        flex: 0 0 calc(calc(100% - 12px)/2);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .affiliates-card {
+        height: 600px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .affiliates-card {
+        flex: 0 0 100%;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .affiliates-card {
+        height: 600px;
+    }
 }

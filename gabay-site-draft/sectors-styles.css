@@ -20,6 +20,9 @@
     font-size: var(--title-size);
     user-select: none;
     z-index: 2;
+    text-align: center;
+    padding-left: var(--default-padding);
+    padding-right: var(--default-padding);
 }
 
 .sectors-sector-content {
@@ -54,7 +57,7 @@
 .sectors-about {
     flex: 1 1 50%;
     background-color: white;
-    padding: var(--default-padding);
+    padding: var(--default-padding) var(--default-padding) 0 var(--default-padding);
     box-sizing: border-box;
 
     display: flex;
@@ -65,12 +68,12 @@
 }
 
 .sectors-about > h1 {
-
+    font-size: var(--sectonrs-body-heading);
 }
 
 .sectors-about > p {
     margin: 1rem 0 3rem 0;
-    font-size: 18px;
+    font-size: var(--sectors-body-font-size);
 }
 
 .sectors-button {
@@ -223,6 +226,22 @@
 #sectors-scholars-content-body-ul {
     font-size: var(--sectors-body-font-size);
     margin: 0 0 1rem 4rem;
+}
+
+
+
+@media screen and (max-width: 650px) {
+    #first-sector {
+        flex-direction: column;
+    }
+
+    #second-sector {
+        flex-direction: column-reverse;
+    } 
+
+    .sectors-about {
+        padding-bottom: var(--default-padding);
+    }
 }
 
 

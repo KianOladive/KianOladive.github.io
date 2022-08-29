@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="home-styles.css" defer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js" defer></script>
     <script src="home-script.js" defer></script>
+    <script src="nav-toggle-script.js" defer></script>
 
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -35,22 +36,25 @@
             <div id="progress"></div>
         </div>
 
-        <div class="navbar">
+        <div class="navbar closed-nav">
             <a id="gabay-logo" href="index.html">
                 <img  src="02 Full Logo - Horizontal (White).png" alt="">
             </a>
-            <span id="navbar-links">
+            <span id="navbar-links" class="closed-nav">
                 <a href="sectors.html">Sectors</a>
                 <a href="affiliates.html">Affiliates</a>
                 <a href="yabag.html">Yabag</a>
                 <a href="about.html">About</a>
             </span>
+            <div id="nav-toggle" class="closed-nav">
+                <div id="nav-toggle-bar"></div>
+            </div>
         </div>
 
         <div id="landing-page" class="full-view-height">
             <div id="landing-black-layer" class="black-layer" data-rate="0.2"></div>
             <div id="landing-heading" data-rate="-0.5">ATENEO GABAY</div>
-            <div id="landing-subheading" data-rate="-0.5">SA IKAAPATNAPU'T ANIM NA TAON NG PAGTATAYA crop picture thanks</div>
+            <div id="landing-subheading" data-rate="-0.5">SA IKAAPATNAPU'T ANIM NA TAON NG PAGTATAYA</div>
         </div>
 
         <div id="introduction" class="full-view-height">
@@ -58,12 +62,16 @@
             <div id="intro-grid-container">
                 <div id="intro-heading" class="heading" data-aos="fade-right">What is Gabay?</div>
                 <div id="gabay-video" data-aos="fade-right">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/mo4_Io2LxCg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/XQFiL--HgRo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <div id="intro-girl" data-aos="fade-left"><img src="assets/Frame 15.webp" alt=""></div>
+                <div id="intro-girl" data-aos="fade-left" data-aos-delay="400"><img src="assets/Frame 15.webp" alt=""></div>
             <div id="intro-square"></div>
 
             </div>
+        </div>
+
+        <div id="advocacy-quote">
+            <p data-aos="fade-up">We are a community that provides opportunities for quality education to our sectors—Atenean scholars and public elementary school kids.</p>
         </div>
 
         <div id="services">
@@ -72,7 +80,7 @@
 
                 <div id="card-1" class="card" data-aos="fade-up">
                     <div class="card-header">
-                        <div class="services-bg-pic"><img src="assets/1 ACP.webp" alt=""></div>
+                        <div class="services-bg-pic"><img src="assets/home-pics/studybuddy.webp" alt=""></div>
                         <div class="services-black-layer black-layer"></div>
                         <div class="services-card-logo"><img src="assets/Studybuddy Yellow Icon.webp" alt=""></div>
                     </div>
@@ -94,9 +102,9 @@
                     </div>
                 </div>
 
-                <div id="card-2" class="card" data-aos="fade-up" data-aos-delay="400">
+                <div id="card-2" class="card" data-aos="fade-up">
                     <div class="card-header">
-                        <div class="services-bg-pic"><img src="assets/2 Neofight.webp" alt=""></div>
+                        <div class="services-bg-pic"><img src="assets/home-pics/scard.webp" alt=""></div>
                         <div class="services-black-layer black-layer"></div>
                         <div class="services-card-logo"><img src="assets/Scholars_ Card 2021.webp" alt=""></div>
                     </div>
@@ -111,16 +119,16 @@
                             </div>
                         </div>
 
-                        <a href="#" class="card-button">
+                        <!-- <a href="#" class="card-button">
                             <div class="moving-pane">LEARN MORE</div>
                             <div class="orig-text-button">LEARN MORE</div>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
 
-                <div id="card-3" class="card" data-aos="fade-up" data-aos-delay="800">
+                <div id="card-3" class="card" data-aos="fade-up">
                     <div class="card-header">
-                        <div class="services-bg-pic"><img src="assets/Copy of erya (334).webp" alt=""></div>
+                        <div class="services-bg-pic"><img src="assets/home-pics/gts.webp" alt=""></div>
                         <div class="services-black-layer black-layer"></div>
                         <div class="services-card-logo"><img src="assets/Gabby Face.webp" alt=""></div>
                     </div>
@@ -139,7 +147,7 @@
 
                 <div id="card-4" class="card" data-aos="fade-up">
                     <div class="card-header">
-                        <div class="services-bg-pic"><img src="assets/Copy of erya (334).webp" alt=""></div>
+                        <div class="services-bg-pic"><img src="assets/home-pics/booklending.webp" alt=""></div>
                         <div class="services-black-layer black-layer"></div>
                         <div class="services-card-logo"><img src="assets/Owlito for Book Lending.webp" alt=""></div>
                     </div>
@@ -156,9 +164,9 @@
                     </div>
                 </div>
                 
-                <div id="card-5" class="card" data-aos="fade-up" data-aos-delay="400">
+                <div id="card-5" class="card" data-aos="fade-up">
                     <div class="card-header">
-                        <div class="services-bg-pic"><img src="assets/1 ACP.webp" alt=""></div>
+                        <div class="services-bg-pic"><img src="assets/home-pics/gos.webp" alt=""></div>
                         <div class="services-black-layer black-layer"></div>
                         <div class="services-card-logo"><img src="assets/Gabay Store Icon-01.webp" alt=""></div>
                     </div>
@@ -179,30 +187,48 @@
         </div>
 
         <div id="projects">
-            <div id="cream-square-projects"></div>
-            <div id="gray-square-projects"></div>
+            <div id="cream-square-projects" data-aos="fade-right" data-aos-duration="900"></div>
+            <div id="gray-square-projects" data-aos="fade-left"></div>
 
             <div id="projects-col-1" class="projects-col">
                 <img src="assets/projects-vector.webp" alt="" id="projects-vector">
-                <div id="project-card-one-desc" class="project-description"><span>gts desc</span></div>
-                <div id="project-card-two-desc" class="project-description"><span>yep desc</span></div>
-                <div id="project-card-three-desc" class="project-description"><span>gorsem desc</span></div>
-                <div id="project-card-four-desc" class="project-description"><span>ssg desc</span></div>
-                <div id="project-card-five-desc" class="project-description"><span>recweek desc</span></div>
-                <div id="project-card-six-desc" class="project-description"><span>preperya desc</span></div>
+                <div id="project-card-one-desc" class="project-description"><span>
+                    Gabby the Scholar is a year-long initiative that seeks to actively inform the scholar community of scholar-related announcements, and serves as an approachable and reliable scholar-buddy to whom scholars can address their concerns and queries. The project introduces a guide with an amicable personality to the scholar community through Gabby's character.
+                </span></div>
+
+                <div id="project-card-two-desc" class="project-description"><span>
+                    Salubong '22: Biyaheng Iskolar is a three-day welcoming event for freshmen Atenean scholars that aims to acquaint them with the Atenean and Scholars' community. However beyond that, to cater to our current contexts, this year's Salubong also aims to facilitate a smooth transition of freshmen scholars from online to onsite learning community by establishing meaningful relationships between the incoming freshmen scholars and the current scholar community and allowing the upperclassmen to mentor the incoming freshmen throughout their journey in the Ateneo.
+                </span></div>
+
+                <div id="project-card-three-desc" class="project-description"><span>
+                    Gabay Online Store (GOS) is a sustainable hybrid store that focuses on selling the organization's merchandise from previous projects, upcoming projects, and GOS made. The project will be implemented through the use of Gabay Online Store Facebook page and a Google form.
+                </span></div>
+
+                <div id="project-card-four-desc" class="project-description"><span>
+                    Scholars’ Support Group is a year-long project that aims to help the newest batch of Atenean scholars adjust to the college experience through monthly hangouts and semestral plenaries. Each group shall have an upperclassman facilitator to help guide them as they begin their journeys in Ateneo.
+                </span></div>
+
+                <div id="project-card-five-desc" class="project-description"><span>
+                    ?
+                </span></div>
+
+                <div id="project-card-six-desc" class="project-description"><span>
+                    Coming Soon...
+                </span></div>
+
             </div>
 
-            <div id="projects-col-2" class="projects-col">
+            <div id="projects-col-2" class="projects-col" data-aos="fade-left" data-aos-duration="700" data-aos-delay="400">
                 <div id="projects-heading">
                     Upcoming <br> Projects
                 </div>
                 <div id="project-cards">
                     <div class="project-single-card" onmouseover="cardHoverOne()" onmouseout="cardHoverOneOut()"><span>Gabby the Scholar</span></div>
-                    <div class="project-single-card" onmouseover="cardHoverTwo()" onmouseout="cardHoverTwoOut()"><span>Year-End Party</span></div>
-                    <div class="project-single-card" onmouseover="cardHoverThree()" onmouseout="cardHoverThreeOut()"><span>GOrsem</span></div>
+                    <div class="project-single-card" onmouseover="cardHoverTwo()" onmouseout="cardHoverTwoOut()"><span>Salubong</span></div>
+                    <div class="project-single-card" onmouseover="cardHoverThree()" onmouseout="cardHoverThreeOut()"><span>Gabay Online Store</span></div>
                     <div class="project-single-card" onmouseover="cardHoverFour()" onmouseout="cardHoverFourOut()"><span>Scholars' Support Group</span></div>
-                    <div class="project-single-card" onmouseover="cardHoverFive()" onmouseout="cardHoverFiveOut()"><span>RecWeek</span></div>
-                    <div class="project-single-card" onmouseover="cardHoverSix()" onmouseout="cardHoverSixOut()"><span>PrepErya</span></div>
+                    <div class="project-single-card" onmouseover="cardHoverFive()" onmouseout="cardHoverFiveOut()"><span>Studybuddy</span></div>
+                    <div class="project-single-card" onmouseover="cardHoverSix()" onmouseout="cardHoverSixOut()"><span> Coming Soon... </span></div>
                 </div>
             </div>
         </div>
@@ -211,32 +237,32 @@
             <div id="link-container">
 
                 <div class="link-column">
-                    <div class="link-categ">Sectors</div>
-                    <div class="footer-link"><a href="#">Erya</a></div>
-                    <div class="footer-link"><a href="#">Atenean Scholars</a></div>
+                    <a class="link-categ" href="sectors.html">Sectors</a>
+                    <div class="footer-link"><a href="sectors-erya.html">Erya</a></div>
+                    <div class="footer-link"><a href="sectors-scholars.html">Atenean Scholars</a></div>
                 </div>
 
                 <div class="link-column">
-                    <div class="link-categ">Affiliates</div>
-                    <div class="footer-link"><a href="#">Kulito</a></div>
-                    <div class="footer-link"><a href="#">TikTok</a></div>
-                    <div class="footer-link"><a href="#">YouTube</a></div>
-                    <div class="footer-link"><a href="#">Gabby the Scholar</a></div>
+                    <a class="link-categ" href="affiliates.html">Affiliates</a>
+                    <div class="footer-link"><a href="https://www.facebook.com/GabayKulito" target="_blank">Kulito</a></div>
+                    <div class="footer-link"><a href="https://www.tiktok.com/@ateneogabay8776" target="_blank">TikTok</a></div>
+                    <div class="footer-link"><a href="https://www.youtube.com/channel/UCOaaA9arbWyQKx6Q3_38ygA" target="_blank">YouTube</a></div>
+                    <div class="footer-link"><a href="https://www.facebook.com/gabbythescholar" target="_blank">Gabby the Scholar</a></div>
                 </div>
 
                 <div class="link-column">
-                    <div class="link-categ">Yabag</div>
-                    <div class="footer-link"><a href="#">Newsbrief</a></div>
-                    <div class="footer-link"><a href="#">Magazine</a></div>
+                    <a class="link-categ" href="yabag.html">Yabag</a>
+                    <div class="footer-link"><a href="coming-soon.html">Newsbrief</a></div>
+                    <div class="footer-link"><a href="yabag-magazine.html">Magazine</a></div>
                 </div>
 
                 <div class="link-column">
-                    <div class="link-categ">About</div>
-                    <div class="footer-link"><a href="#">Advocacy</a></div>
-                    <div class="footer-link"><a href="#">History</a></div>
-                    <div class="footer-link"><a href="#">Organizational Structure</div>
-                    <div class="footer-link"><a href="#">Offices</a></div>
-                    <div class="footer-link"><a href="#">Committees</a></div>
+                    <a class="link-categ" href="about.html">About</a>
+                    <div class="footer-link"><a href="about-advocacy.html">Advocacy</a></div>
+                    <div class="footer-link"><a href="about-history.html">History</a></div>
+                    <div class="footer-link"><a href="about-org-structure.html">Organizational Structure</div>
+                    <div class="footer-link"><a href="about-offices.html">Offices</a></div>
+                    <div class="footer-link"><a href="about-committees.html">Committees</a></div>
                 </div>
 
             </div>

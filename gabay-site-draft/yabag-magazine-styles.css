@@ -1,0 +1,54 @@
+#yabag-magazine-container {
+    background-color: white;
+}
+
+#yabag-magazine-content {
+    display: flex;
+    flex-direction: column;
+    padding: var(--default-padding);
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+#yabag-magazine-content > iframe {
+    min-height: 600px;
+    width: 700px;
+    border: none;
+}
+
+@media screen and (max-width: 800px) {
+    #yabag-magazine-content > iframe {
+        min-height: 500px;
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #yabag-magazine-content > iframe {
+        min-height: 400px;
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #yabag-magazine-content > iframe {
+        min-height: 300px;
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    #yabag-magazine-content > iframe {
+        min-height: 500px;
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #yabag-magazine-content > iframe {
+        min-height: 400px;
+        width: 250px;
+    }
+}
+
