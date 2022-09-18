@@ -11,7 +11,7 @@ function getPASResults(id_no) {
     //     .then(response => console.log(response))
     
     var xmlhttp = new XMLHttpRequest();
-    var theUrl = "https://script.google.com/a/macros/obf.ateneo.edu/s/AKfycbxNRkILkzz_P9WU88OjypiZ-a2-htF8o5ecs14dKoMlpHjRly4go1HmhuXuH2y8q_1fUQ/exec?id_no="+id_no;
+    var theUrl = "https://script.google.com/a/macros/obf.ateneo.edu/s/AKfycbyCON3p_aROroCU45vu_RFvNV6cmYW8aUACVX6cTcjohvDHWgcPw9rWJ5kMF3wmzLEf_Q/exec?id_no="+id_no;
     xmlhttp.open("GET", theUrl);
     xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xmlhttp.send();
