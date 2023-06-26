@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    font-size: clamp(20px, 5vw, 40px);
+    color: white;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#hi {
+    font-size: clamp(30px, 5vw, 80px);
+    font-family: 'Montserrat';
+}
+
+.top {
+    background-image: url(media/blue-wave-top.svg);
+}
+
+.bottom {
+    background-image: url(media/blue-wave.svg);
+}
+
+.waver {
+    aspect-ratio: 1920/1080;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+.onecol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10vw;
+    text-align: center;
+}
+
+.twocolpiconright {
+    display: flex;
+    flex-direction: row;
+}
+
+.twocolpiconright > * {
+    flex-basis: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.twocolpiconright > div:first-child {
+    justify-content: right;
+    padding: 0 2vw 0 8vw;
+    text-align: right;
+}
+
+.twocolpiconright > div:nth-child(2) {
+    justify-content: left;
+}
+
+.twocolpiconleft {
+    display: flex;
+    flex-direction: row;
+}
+
+.twocolpiconleft > * {
+    flex-basis: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.twocolpiconleft > div:first-child {
+    justify-content: right;
+    text-align: right;
+}
+
+.twocolpiconleft > div:nth-child(2) {
+    padding: 0 8vw 0 2vw;
+    justify-content: left;
+}
+
+
+#photo {
+    width: 80%;
+    max-width: 400px;
+    min-width: 200px;
+}
+
+.three {
+    background-image: url(media/wave-two.svg);
+}
+
+.four {
+    background-image: url(media/blob.svg);
+}
+
+.five {
+    background-image: url(media/wave-three.svg);
+}
+
+.six {
+    background-image: url(media/wave-four.svg);
+}
+
+.plain {
+    background-color: #002233;
+    text-align: center;
+}
+
+.stacked {
+    background-image: url(media/stacked-waves.svg);
+    text-align: center;
+}
+
+.seven {
+    background-image: url(media/wave-five.svg);
+}
+
+.eight {
+    background-image: url(media/wave-six.svg);
+}
