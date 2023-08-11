@@ -402,6 +402,22 @@ header {
     grid-row: 33 / span 1;
 }
 
+.project-text-twelve { 
+    grid-row: 36 / span 1;
+}
+
+.project-text-thirteen { 
+    grid-row: 39 / span 1;
+}
+
+.project-text-fourteen { 
+    grid-row: 42 / span 1;
+}
+
+.project-text-fifteen { 
+    grid-row: 45 / span 1;
+}
+
 /* ======================================= pictures */
 
 .project-pic {  
@@ -470,6 +486,22 @@ header {
 
 .eleventh-pic {
     grid-row: 32 / span 3;
+}
+
+.twelfth-pic {
+    grid-row: 35 / span 3;
+}
+
+.thirteenth-pic {
+    grid-row: 38 / span 3;
+}
+
+.fourteenth-pic {
+    grid-row: 41 / span 3;
+}
+
+.fifteenth-pic {
+    grid-row: 44 / span 3;
 }
 
 .picz-odd h3 {
