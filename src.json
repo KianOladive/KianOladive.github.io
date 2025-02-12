@@ -1,0 +1,92 @@
+{
+    "projects": [
+        {
+            "title": "Kalsuri",
+            "description": "Kalsuri is an AI platform for reporting road defects. Its mobile app is designed to take photographs of road defects, and through the use of computer vision, it can detect the type of road damage and report the defects to a central web application where defects can be prioritized and assigned to maintenance personnel.",
+            "image": "kalsuri.webp",
+            "stack": ["React", "CSS", "JavaScript", "FastAPI", "Python"],
+            "link": "https://www.youtube.com/watch?v=UCgQYrs5uZ0&ab_channel=kian%27skeyboards",
+            "link_title": "Walkthrough Video"
+        },
+        {
+            "title": "Package Manager App",
+            "description": "This was the final project for my Information Management class, which is a class that focused on working with SQL and databases. This project was developed using Django and presented a managerial view of a fictional delivery company that allowed its users to filter through the database using a dynamic SQL statement.",
+            "image": "blue-mark.webp",
+            "stack": ["HTML", "CSS", "JavaScript", "Django"],
+            "link": "https://youtu.be/qsCkKyCJkfU?si=_pdgD5N2aV_oOFmW",
+            "link_title": "Walkthrough Video"
+        },
+        {
+            "title": "Wordle Clone",
+            "description": "A wordle clone developed for the Year-End party (a project I headed) for Ateneo Gabay. We asked participants to solve a particular word (the event's theme) wordle-style.",
+            "image": "wordle.webp",
+            "stack": ["HTML", "CSS", "JavaScript"],
+            "link": "https://kianoladive.github.io/yep-wordle/yep-wordle.html",
+            "link_title": "Play"
+        },
+        {
+            "title": "Wordle Streaks",
+            "description": "Extending on the current version of Wordle, this game, which was developed using CSS, HTML, and Javascript, essentially removes the one-day wait for a new Wordle word. Players can keep hitting the 'Next' button, allowing them to play Wordle for as long as they want. This game keeps the player's current streak.",
+            "image": "wordle2.webp",
+            "stack": ["HTML", "CSS", "JavaScript"],
+            "link": "https://kianoladive.github.io/wordle-streaks/wordle-streaks.html",
+            "link_title": "Play"
+        },
+        {
+            "title": "Ateneo Food Directory",
+            "description": "As part of the requirements for my Enterprise Systems Programming class, we were tasked to create a software application that demostrated our abilities to use SpringBoot. My group created Ateneo Food Directory, an one-stop-shop for an Atenean's cravings.",
+            "image": "ateneofooddirectory.webp",
+            "stack": ["SpringBoot", "React", "JavaScript"],
+            "link": "https://www.youtube.com/watch?v=3NTSKGGl2ok&feature=youtu.be",
+            "link_title": "App Walkthrough"
+        },
+        {
+            "title": "AEGIS Website",
+            "description": "I worked on the front-end (and a bit of back-end bug fixing) of Ateneo AEGIS' (the official yearbook committee of the undergraduate students of the Loyola Schools) website.",
+            "image": "aegis.webp",
+            "stack": ["React", "JavaScript", "Django"],
+            "link": "https://www.youtube.com/watch?v=2Elsj9MkYEY&ab_channel=kian%27skeyboards",
+            "link_title": "Site Walkthrough"
+        },
+        {
+            "title": "Bullet Journal App",
+            "description": "This bullet journal was my midterm project for my Software Development class. It was made using the Django framework. This is where I first experienced working with the magic of backend development.",
+            "image": "bujo.webp",
+            "stack": ["HTML", "CSS", "JavaScript", "Django"],
+            "link": "https://youtu.be/M4aoXDYf6JQ",
+            "link_title": "Walkthrough Video"
+        },
+        {
+            "title": "Student Assignment Manager",
+            "description": "This web app is designed to be a task distributor used by teachers in order to disseminate tasks to their students. A teacher can create a Questboard for a specific topic in the course, and assign the number of stars needed to get full marks on any particular quest. The teacher can then post quests in the Questboard where up to three students can call dibs and earn stars for the questboard.",
+            "image": "qb.webp",
+            "stack": ["HTML", "CSS", "Django", "Python"],
+            "link": "https://youtu.be/yxQfNkMkfnE?si=fTBzskodp8Xs51HM",
+            "link_title": "Walkthrough Video"
+        },
+        {
+            "title": "Ateneo Gabay Website",
+            "description": "As the Associate Secretary-General for Website Management of Ateneo Gabay, the Ateneo organization that advocates for quality education for Atenean scholars and public elementary school kids, I made the org's website.",
+            "image": "gabaysite.webp",
+            "stack": ["React", "CSS", "JavaScript"],
+            "link": "https://www.youtube.com/watch?v=rygPCy6v58Q",
+            "link_title": "Site Walktrough"
+        },
+        {
+            "title": "LIONS Website",
+            "description": "The League of Independent Organizations (LIONS) of the Ateneo needed a website for their recruitment phase. I was part of the two-man team that created this website for them.",
+            "image": "lionssite.webp",
+            "stack": ["React", "Tailwind", "JavaScript"],
+            "link": "https://www.youtube.com/watch?v=2crr8iomywU&feature=youtu.be",
+            "link_title": "Site Walktrough"
+        },
+        {
+            "title": "Verdant Agri Website",
+            "description": "As part of Ateneo education, students are challenged to become persons with and for others. We were tasked to help a target community in need of our set of skills and experiences. My group was designed and developed the website for Verdant Agriculture, a cooperative that seeks to help Overseas Filipino workers become more financially stable once they return to the Philippines.",
+            "image": "verdant.webp",
+            "stack": ["React", "CSS", "JavaScript"],
+            "link": "https://kianoladive.github.io/verdant-agri-cooperative-website/index.html",
+            "link_title": "Visit Site"
+        }
+    ]
+}

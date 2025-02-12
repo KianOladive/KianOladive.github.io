@@ -6,354 +6,224 @@
         <!-- fade animations -->
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <!-- logos -->
-        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-        <title> Kian's Personal Website </title>
+        <title> Kian Oladive </title>
         <link rel="stylesheet" href="style.css" type="text/css" defer>
-        <link rel="shortcut icon" type="image/x-icon" href="media/favicon.ico" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js" defer></script>
-        <script src="app.js" defer></script>
+        <link rel="shortcut icon" type="image/x-icon" href="media/logo.ico" />
     </head>
     <body>
-         <div id="real-intro">
-             <div class="real-intro-container">
-                <h1 class="hide">
-                  <span class="text">Hi there.</span>
-                </h1>
-                <h1 class="hide">
-                  <span class="text">Welcome to my</span>
-                </h1>
-                <h1 class="hide">
-                  <span class="text">website.</span>
-                </h1>
-             </div>
-         </div>
-
-         <div id="slider"></div>
-
-        <header>
-            <center>
-                <a href="#hone" class="nav-text" data-aos="fade-up">HOME</a>
-                <a href="#my-projects" class="nav-text" data-aos="fade-up">PROJECTS</a>
-                <a href="#contact" class="nav-text" data-aos="fade-up">CONTACT</a>
-            </center>
-        </header>
-
-        <div class='landing' id='hone'>
-            <img id='first-pic' src='media/default.png' data-aos="fade-left" data-aos-delay="3000">
-            <div class="landing-page-elements">
-                <p id="hi"> Greetings! I'm </p>
-                <div id="name">
-                    <div id="type-animation">
-
-                    </div>
-                     Kian Oladive 
-                </div>
-                <div id="button-container">
-                    <a href="about.html" id="first-button"> ALL THINGS KIAN </a>
-                </div>
-                
+        <div id="landing">
+            <div id="landing-left" data-aos="fade-right">
+                <img src="media/landing-pic.webp" alt="logo">
             </div>
+            <div id="landing-right" data-aos="fade-left">
+                <div id="landing-text">greetings! i am <span>kian oladive</span></div>
+                <div id="landing-orbs">
+                    <div class="orb1"></div>
+                    <div class="orb2"></div>
+                    <div class="orb3"></div>
+                    <div class="orb4"></div>
+                    <div class="orb5"></div>
+                    <div class="orb6"></div>
+                </div>
+                <div id="landing-buttons">
+                    <a href="#projects" class="button" id="projects-button"> projects </a>
+                    <a href="#work-experience" class="button" id="workexp-button"> work exp. </a>
+                    <a href="#contact" class="button" id="contact-button"> contact </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="orbs">
+            <div class="orb1"></div>
+            <div class="orb2"></div>
+            <div class="orb3"></div>
+            <div class="orb4"></div>
+            <div class="orb5"></div>
+            <div class="orb6"></div>
+        </div>
+
+
+        <div id="background">
+            <div class="title" data-aos="fade-up">background</div>
+            <div id="background-parts">
+                <div id="background-left" data-aos="fade-right">
+                    I’m a Master of Science in Computer Science student from Ateneo de 
+                    Manila University set to graduate this July. I got my BS Computer 
+                    Science degree from the same university in 2023.
+                    <br><br>
+                    I am currently looking for Software Development, Data Engineering, 
+                    and Project Management roles in companies who want an efficient, 
+                    proactive, and passionate employee. 
+                </div>
+                <div id="background-right" data-aos="fade-left">
+                    <div id="bg-img-holder">
+                        <img src="media/gradpic.webp" alt="background">
+                        <p>BS Computer Science, 2023
+                        <br>
+                        <span class="highlighted">3.85/4.00 GPA</span>, Magna Cum Laude</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="orbs">
+            <div class="orb1"></div>
+            <div class="orb2"></div>
+            <div class="orb3"></div>
+            <div class="orb4"></div>
+            <div class="orb5"></div>
+            <div class="orb6"></div>
+        </div>
+
+        <div id="projects">
+            <div class="title" data-aos="fade-up">projects</div>
+            <div id="projects-parts" data-aos="fade-up">
+                <button id="left-arr">
+                    <img src="media/leftarr.png" alt="left-arr">
+                </button>
+                
+                <div id="scroll-container">
+                    <div id="project-scroll" class="scroll-start">
+                    </div>
+                </div>
+
+                <button id="right-arr">
+                    <img src="media/rightarr.png" alt="right-arr">
+                </button>
+            </div>
+        </div>
+
+        <div class="orbs" id="work-orbs">
+            <div class="orb1"></div>
+            <div class="orb2"></div>
+            <div class="orb3"></div>
+            <div class="orb4"></div>
+            <div class="orb5"></div>
+            <div class="orb6"></div>
+        </div>
+
+        <div id="work-experience">
+            <div class="title" data-aos="fade-up">work experience</div>
+            <div id="work-cards">
+
+            <div class="work-card" data-aos="fade-right">
+                <div class="card-head">
+                <img src="media/work-exp-pictures/unilever.webp">
+                <div class="card-title">
+                    Data and Digital Intern
+                    <br>
+                    <span>@ Unilever Philippines</span>
+                </div>
+                </div>
+                <ul class="bullets">
+                <li>Tasked with improving R&D processes through an
+                    automated solution in the form of a web
+                    application. Was solely responsible for project
+                    management, software development, and
+                    deployment.</li>
+                <li>Contributed to the development of a Microsoft
+                    PowerApp application to improve processes
+                    concerned with inter-departmental coordination
+                    and innovation tracking.</li>
+                <li>Conducted in-depth market research to analyze
+                    customer behavior and trends, delivering insights
+                    through data visualization to stakeholders.</li>
+                <li>Designed and implemented a user-friendly web
+                    scraper, enabling non-technical users to perform</li>
+                </ul>
+            </div>
+
+            <div class="work-card" data-aos="fade-left">
+                <div class="card-head">
+                <img src="media/work-exp-pictures/bolt.webp">
+                <div class="card-title">
+                    Software Engineering Intern
+                    <br>
+                    <span>@ Bolt Graphics Inc</span>
+                </div>
+                </div>
+                <ul class="bullets">
+                    <li>Implemented the network infrastructure of the
+                        company's core software, ensuring seamless
+                        integration, performance optimization, and
+                        reliability.</li>
+                    <li>Handled web development and scene
+                        development tasks involving 3D renders, focusing
+                        on creating high-quality visuals, optimizing
+                        performance, and ensuring seamless user
+                        experiences.</li>
+                    </ul>
+            </div>
+
+            <div class="work-card" data-aos="fade-right">
+                <div class="card-head">
+                <img src="media/work-exp-pictures/azeus.webp">
+                <div class="card-title">
+                    Web Development Intern
+                    <br>
+                    <span>@ Azeus Systems Philippines Limited</span>
+                </div>
+                </div>
+                <ul class="bullets">
+                <li>Designed and developed key features of the web
+                    application for Convene ESG, a sustainability
+                    compliance software. Primarily worked with the
+                    provided tech stack (Elixir Ambience) along with
+                    JavaScript, HTML, and CSS to enhance functionality,
+                    usability, and performance.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="work-card" data-aos="fade-right">
+                <div class="card-head">
+                <img src="media/work-exp-pictures/quizlet.webp">
+                <div class="card-title">
+                    Python Developer
+                    <br>
+                    <span>@ Quizlet Content Development Team</span>
+                </div>
+                </div>
+                <ul class="bullets">
+                <li>Developed academic tutorial videos using the animation library Manim to illustrate complex STEM concepts visually.</li>
+                <li>Created high-quality educational content, including a comprehensive SAT and ACT exam preparation series, improving student accessibility.</li>
+                <li>Collaborated with the content development team to enhance visual explanations and maintain educational accuracy.</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+
+        <div class="orbs">
+            <div class="orb1"></div>
+            <div class="orb2"></div>
+            <div class="orb3"></div>
+            <div class="orb4"></div>
+            <div class="orb5"></div>
+            <div class="orb6"></div>
         </div>
          
-        <div class="quick-intro-container">
-            <div id="animate-bg"></div>
-            <div class='quick-intro'> 
-                <p id='intro-intro' data-aos="fade-down"> Thanks for paying me a visit! </p>
-                <p class='intro-text' data-aos="fade-down"> Hey there! I’m glad you found your way to my personal website. 
-                    I’m Kian Oladive, Master's of Science in Computer Science student from Ateneo de Manila University. 
-                    While technically still enrolled in my Master's program, I am on my last semester and only have
-                    this zero-unit course where I am to finalize my manuscript for my thesis. 
-                    If you wanna learn more about what I’m like, what I like, 
-                    and just general things about me, feel free to click the button below. </p>
-                <a href="about.html" id="second-button" data-aos="fade-up"> MORE ABOUT ME </a>
-                <p class='intro-text' data-aos="fade-up"> The following section will contain a list of some of my past projects. </p>
+        <div id="contact">
+            <div id="contact-title" class="title" data-aos="fade-up">contact</div>
+            <div id="contact-logos" data-aos="fade-up">
+                <a href="https://www.linkedin.com/in/kian-angelo-oladive-707248229/" target="_blank"><img class='contact-logo' src="media/contact-pictures/linkedin.webp"></a>
+                <a href="mailto:kian.oladive.work@gmail.com"><img class='contact-logo' src="media/contact-pictures/mail.webp"></a>
             </div>
-
         </div>
-        
-        <div class="projects" id="my-projects">
-            <h1 class='project-header' data-aos="fade-up"> My Projects </h1>
-        
-            <div class = "first-pic picz-odd" data-aos="zoom-in"> 
-                <img class='project-pic front' src = "media/maze.png">
-                <a href="https://youtu.be/ifOsLfSKrQo" target="_blank"><h3> Learn More </h3></a>
-            </div>
-            <div class="project-text-one odd" data-aos="fade-left">
-                <h2> Terminal Maze Game </h2>
-                <p> This was my first college project, and it was developed using Python. 
-                    The initial version of this project had hard-coded maze paths and 
-                    user interaction. Users can input their desired start and end locations
-                    on a preset maze grid, and input their desired directions. </p>
-            </div>
-        
-            <div class = "twoth-pic picz-even" data-aos="zoom-in"> 
-                <img class='project-pic front' src = "media/java-gui.png">
-                <a href="https://youtu.be/NT1RDLfs6UM" target="_blank"><h3> Learn More </h3></a>
-            </div>
-            <div class='project-text-two even' data-aos="fade-right">
-                <h2> Java GUI Animation </h2>
-                <p> This was my second college project, and it was developed 
-                    using Java for my Intro to Programming class. Because of the pandemic, we ended up 
-                    not submitting our projects for the class. I still finished mine, 
-                    though. </p>
-            </div>
-        
-            <div class = "third-pic picz-odd" data-aos="zoom-in"> 
-                <img class='project-pic front' src = "media/bujo.png">
-                <a href="https://youtu.be/M4aoXDYf6JQ" target="_blank"><h3> Learn More </h3></a>
-            </div>
-            <div class="project-text-three odd" data-aos="fade-left">
-                <h2> Bullet Journal </h2>
-                <p> This bullet journal was my midterm project for my Software 
-                    Development class, and was made using the Django framework. 
-                    This is where I first experienced working with the magic of 
-                    backend development. </p>
-            </div>
-        
-            <div class = "fourth-pic picz-even" data-aos="zoom-in"> 
-                <img class='project-pic front' src = "media/qb.png">
-                <a href="https://youtu.be/yxQfNkMkfnE" target="_blank"><h3> Learn More </h3></a>
-            </div>
-            <div class='project-text-four even' data-aos="fade-right">
-                <h2> Questboard </h2>
-                <p> This was my project for the same Software Development class as above. 
-                    It is designed to be a task distributor used by teachers in 
-                    order to disseminate tasks to their students. A teacher can 
-                    create a Questboard for a specific topic in the course, and 
-                    assign the number of stars needed to get full marks on any 
-                    particular quest. The teacher can then post quests in the Questboard 
-                    where up to three students can call dibs and earn stars for the questboard. </p>
-            </div>
-        
-            <div class = "fifth-pic picz-odd" data-aos="zoom-in"> 
-                <img class='project-pic front' src = "media/calendar.jpg">
-                <h3> Learn More </h3>
-            </div>
-            <div class="project-text-five odd" data-aos="fade-left">
-                <h2> Calendar.io </h2>
-                <p> Calendar.io was a sort of research project that required 
-                    user testing to test the usability of an app that we proposed. 
-                    Said app needed to cater to a need/problem of our target 
-                    audience, and Calendar.io was an app that automatically 
-                    created schedules based on user data. </p>
-            </div>
-        
-            <div class = "sixth-pic picz-even" data-aos="zoom-in"> 
-                <img class='project-pic front' src = "media/blue-mark.png">
-                <a href="https://youtu.be/qsCkKyCJkfU" target="_blank"><h3> Learn More </h3></a>
-            </div>
-            <div class='project-text-six even' data-aos="fade-right">
-                <h2> Blue Mark Delivery Services </h2>
-                <p> This was the final project for my Information Management 
-                    class, which is a class that focused on working with SQL and databases. 
-                    This project was developed using Django and presented a 
-                    managerial view of a fictional delivery company that allowed 
-                    its users to filter through the database using a dynamic SQL 
-                    statement. </p>
-            </div>
-        
-            <div class = "seventh-pic picz-odd" data-aos="zoom-in"> 
-                <img class='project-pic front' src = "media/website.jpg">
-                <a href="old website/index.html" target="_blank"><h3> Visit my website </h3></a>
-            </div>
-            <div class="project-text-seven odd" data-aos="fade-left">
-                <h2> Personal Website </h2>
-                <p> I initially created a version of the site you are currently 
-                    viewing for my Web Design class. I decided to create this 
-                    newer version to redeem myself from that disaster, and to 
-                    better present my portfolio, as I will add continue to add 
-                    my finished projects to this site.  </p>
-            </div>  
-        
-            <div class = "eigth-pic picz-even" data-aos="zoom-in"> 
-                <img class='project-pic front' src = "media/lifestyletracker.png">
-                <a href="https://youtu.be/uKMo16frXX0" target="_blank"><h3> Learn More </h3></a>
-            </div>
-            <div class="project-text-eight even" data-aos="fade-right">
-                <h2> Java GUI - Lifestyle Tracker </h2>
-                <p> This was my second Java GUI Project, which was one of our 
-                    major requirements in my Intro to Programming class. It 
-                    takes in user input to determine weight loss or gain
-                    depending on the user's diet.  </p>
-            </div>  
 
-            <div class = "ninth-pic picz-odd" data-aos="zoom-in"> 
-                <img class='project-pic front' src = "media/wordle.jpg">
-                <a href="yep-wordle/yep-wordle.html" target="_blank"><h3> Play </h3></a>
-            </div>
-            <div class="project-text-nine odd" data-aos="fade-left">
-                <h2> Wordle Clone </h2>
-                <p> A wordle clone developed for a project of Ateneo Gabay (Year-End Party), where
-                    we will ask participants to solve a particular word (the event's theme)  </p>
-            </div>  
-
-            <div class = "tenth-pic picz-even" data-aos="zoom-in"> 
-                <img class='project-pic front' src = "media/wordle2.png">
-                <a href="wordle-streaks/wordle-streaks.html" target="_blank"><h3> Play </h3></a>
-            </div>
-            <div class="project-text-ten even" data-aos="fade-right">
-                <h2> Wordle Streaks </h2>
-                <p> Extending on the current version of Wordle, this game, which was 
-                    developed using CSS, HTML, and Javascript, essentially removes the 
-                    one-day wait for a new Wordle word. Players can keep hitting 
-                    the "next" button, allowing them to play Wordle for as long as 
-                    they want. This game keeps the player's current streak.  </p>
-            </div>  
-
-            <div class = "eleventh-pic picz-odd" data-aos="zoom-in"> 
-                <img class='project-pic front' src = "media/verdant.png">
-                <a href="https://kianoladive.github.io/verdant-agri-cooperative-website/index.html" target="_blank"><h3> View Site </h3></a>
-            </div>
-            <div class="project-text-eleven odd" data-aos="fade-left">
-                <h2> Verdant Agri Website </h2>
-                <p> As part of Ateneo education, students are challenged to persons with and for others. As part of 
-                    the National Service Training Program, students are grouped by degree programs and are tasked 
-                    to help a target community in need of the set of skills and experiences that the students have. 
-                    My group was tasked to help out Verdant Agriculture, a cooperative that seeks to help Overseas 
-                    Filipino workers become more financially stable once they return to the Philippines. We made 
-                    a website for them to help out with marketing and to serve as a central hub for information regarding 
-                    the cooperative. </p>
-            </div>  
-
-            <div class = "twelfth-pic picz-even" data-aos="zoom-in"> 
-                <img class='project-pic front' src = "media/gabay.png">
-                <a href="https://youtu.be/rygPCy6v58Q" target="_blank"> <h3> View Site Walkthrough </h3> </a>
-            </div>
-            <div class="project-text-twelve even" data-aos="fade-right">
-                <h2> Ateneo Gabay Website </h2>
-                <p> As the Associate Secretary-General for Website Management of Ateneo Gabay, the Ateneo organization that 
-                    advocates for quality education for Atenean scholars and public elementary school kids, I made the org's website.  </p>
-            </div> 
-
-            <div class = "thirteenth-pic picz-odd" data-aos="zoom-in"> 
-                <img class='project-pic front' src = "media/lions.png">
-                <a href="https://youtu.be/2crr8iomywU" target="_blank"><h3> View Site Walkthrough </h3></a>
-            </div>
-            <div class="project-text-thirteen odd" data-aos="fade-left">
-                <h2> LIONS Website </h2>
-                <p> The League of Independent Organizations (LIONS) of the Ateneo needed a website for their recruitment phase. 
-                    I was part of the two-man team that created this website for them. </p>
-            </div> 
-
-            <div class = "fourteenth-pic picz-even" data-aos="zoom-in"> 
-                <img class='project-pic front' src = "media/ateneofooddirectory.png">
-                <a href="https://youtu.be/3NTSKGGl2ok" target="_blank"> <h3> View Site Walkthrough </h3> </a>
-            </div>
-            <div class="project-text-fourteen even" data-aos="fade-right">
-                <h2> Ateneo Food Directory </h2>
-                <p> As part of the requirements for my Enterprise Systems Programming class, we were tasked to create a software application
-                    that demostrated our abilities to use SpringBoot. My group created Ateneo Food Directory, an one-stop-shop for an 
-                    Atenean's cravings. </p>
-            </div> 
-
-            <div class = "fifteenth-pic picz-odd" data-aos="zoom-in"> 
-                <img class='project-pic front' src = "media/aegis.png">
-                <a href="https://youtu.be/2Elsj9MkYEY" target="_blank"><h3> View Site Walkthrough </h3></a>
-            </div>
-            <div class="project-text-fifteen odd" data-aos="fade-left">
-                <h2> AEGIS Website </h2>
-                <p> I worked on the front-end (and a bit of back-end bug fixing) of Ateneo AEGIS' (the official 
-                    yearbook committee of the undergraduate students of the Loyola Schools) website.  </p>
-            </div> 
-        
-            <!-- <div class = "eleventh-pic picz-odd" data-aos="fade-right"> 
-                <img class='project-pic front' src = "media/qmark.jpg">
-                <h3> Coming Soon... </h3>
-            </div>
-            <div class="project-text-eleven odd" data-aos="fade-left">
-                <h2>Coming Soon...</h2>
-            </div>   -->
+        <div class="orbs">
+            <div class="orb1"></div>
+            <div class="orb2"></div>
+            <div class="orb3"></div>
+            <div class="orb4"></div>
+            <div class="orb5"></div>
+            <div class="orb6"></div>
         </div>
-        
-        <div class='footer' id="contact">
-            <div id="footer-bg-animate"></div>
 
-            <h4 data-aos="fade-up"> Connect With Me. </h4>
-            <ul>
-                <li>
-                    <a href="https://fb.com/kianangelo.oladive" target="_blank">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span class="fa fa-facebook"></span>
-                    </a>
-                </li>
-        
-                
-                <li>
-                    <a href="https://twitter.com/kian7_" target="_blank">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span class="fa fa-twitter"></span>
-                    </a>
-                </li>
-        
-                
-                <li>
-                    <a href="coming_soon.html" target="_blank">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span class="fa fa-instagram"></span>
-                    </a>
-                </li>
-        
-                
-                <li>
-                    <a href="https://www.linkedin.com/in/kian-angelo-oladive-707248229/" target="_blank">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span class="fa fa-linkedin"></span>
-                    </a>
-                </li>
-        
-                
-                <li>
-                    <a href="coming_soon.html" target="_blank">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span class="fa fa-spotify"></span>
-                    </a>
-                </li>
-        
-                        
-                <li>
-                    <a href="email.html" target="_blank">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span class="fa fa-envelope"></span>
-                    </a>
-                </li>
-            </ul>
-            
-            <h3 data-aos="fade-down"> Reach Out. </h3>
+        <div id="footer">
+            Made with ❤️ by Kian Oladive
         </div>
-        
-        <div class="actual-footer">
-            <p> Designed and Developed by Kian Oladive. </p>
-        </div>
-        
-    
-        <script>
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener("click", function(e){
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute("href")).scrollIntoView({
-                        behavior: "smooth"
-                    });
-                });
-            });
-        </script>
+
+        <script src="script.js" defer></script>
     </body>
     <!-- animations -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
