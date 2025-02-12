@@ -10,7 +10,7 @@ const projectTransformer = (projects) => {
         }
         out += `
             <div class="stack-logo-wrapper">
-                <img class="stack-logo" src="media/stack-logos/${project_file}" alt="${project} logo">
+                <img class="stack-logo" src="media/stack-logos/${project_file.toLowerCase()}" alt="${project} logo">
                 <span class="stack-logo-name">${project}</span>
             </div>
         `;
